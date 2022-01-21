@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "title": "Node Inbound Delivery",
+    "properties": {
+        "inboundDeliveryNumber": {
+            "type": "string",
+            "title": "Inbound Delivery Number",
+            "description": "For inbound appointments the shipment number represent the Inbound Delivery carrying products from multiple vendors to the warehouse. One or multiple ASN can be assigned to an Inbound Delivery. One or multiple Inbound Deliveries can be assigned to an appointment\n\nFor outbound appointments the shipment number represents a shipment carrying cartons for multiple customers from the warehouse. One or multiple outbound shipments can be assigned to an appointment",
+            "isActivated": true,
+            "mode": "string",
+            "example": "CS00001245"
+        },
+        "nodeLocationCode": {
+            "type": "string",
+            "title": "Node Location Code",
+            "description": "Plant code of the Inbound Delivery",
+            "isActivated": true,
+            "mode": "string",
+            "example": "1067"
+        },
+        "nodeInboundAsns": {
+            "type": "array",
+            "title": "nodeInboundASNs",
+            "isActivated": true,
+            "subtype": "array<txt>",
+            "additionalItems": true,
+            "uniqueItems": false,
+            "items": {
+                "isActivated": true,
+                "$ref": "#/components/schemas/"
+            }
+        }
+    },
+    "isActivated": true
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://marsh.com/schemas/party/partyEnums.json",
+	"description": "Marsh Company Enumerations Release 20.05",
+		"definitions": {
+		"EnumPartyType": {
+			"type": "string",
+			"enum": [
+				"Company",
+				"Colleague",
+				"Carrier"
+			]
+		}
+	}
+}

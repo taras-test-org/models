@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://marsh.com/schemas/colleague/colleagueEnums.json",
+	"description": "Marsh Colleague Enumerations Release 20.05",
+	"definitions": {
+		"EnumBusinessUnitCode": {
+			"type": "string",
+			"enum": [
+				"WMUSO",
+				"GUYGB",
+				"MMCGB",
+				"MARGB",
+				"MRMGB",
+				"MCGGB"
+			]
+		},
+		"EnumOperatingCompany": {
+			"type": "string",
+			"enum": [
+				"Oliver Wyman Company",
+				"Mercer HR",
+				"Marsh",
+				"Guy Carpenter",
+				"MMC"
+			]
+		},
+		"EnumStatusCode": {
+			"type": "string",
+			"enum": [
+				"PSN_STAT_INACTIV",
+				"PSN_STAT_ACTIV"
+			]
+		}
+	}
+}

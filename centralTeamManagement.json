@@ -1,0 +1,417 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$ref": "#/definitions/CentralTeamManagement",
+	"description": "Central Team Management Release 20.10-27",
+	"definitions": {
+		"CentralTeamManagement": {
+			"description": "Role allocations details business entity and role to be allocated to team members/colleagues.",
+			"type": "object",
+			"properties": {
+				"roleAllocationId": {
+					"type": "string"
+				},
+				"memberAllocationTypeCd": {
+					"$ref": "centralTeamManagementEnums.json#/definitions/EnumMemberAllocationType"
+				},
+				"allocatingLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"allocatingLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"allocatingAuditDetail": {
+					"$ref": "marshCore.json#/definitions/AuditStamp"
+				},
+				"memberDetails": {
+					"description": "Role allocations from colleagues to business entities such as accounts, placements, policies, claims etc",
+					"type": "object",
+					"oneOf": [
+						{
+							"$ref": "team.json#/definitions/Team"
+						},
+						{
+							"$ref": "colleague.json#/definitions/Colleague"
+						}
+					]
+				},
+				"businessEntityRoleDetail": {
+					"description": "The business entities and roles to which apply the allocation members",
+					"type": "object",
+					"properties": {
+						"roleCd": {
+							"$ref": "marshCoreEnums.json#/definitions/EnumColleagueRole"
+						},
+						"roleCdDescriptionTx": {
+							"description": "The role description for the business entity in question.",
+							"type": "string"
+						},
+						"rolePrimaryIn": {
+							"description": "An indicator to show whether the role allocation is the primary one for a businessEntity/roleCd combination. There should only be one primary role for a business Entity/roleCd but there can be any number of secondary role allocations",
+							"type": "boolean"
+						},
+						"roleTypeCd": {
+							"$ref": "centralTeamManagementEnums.json#/definitions/EnumRoleFunctionType"
+						},
+						"roleSubCd": {
+							"description": "The role sub code for scenarios where the roleCd is 'Other' .",
+							"type": "string"
+						},
+						"roleSubCdDescriptionTx": {
+							"description": "The role sub code description (free text) for scenarios where the roleCd is 'Other' .",
+							"type": "string"
+						},
+						"roleClientFacingIn": {
+							"description": "Indicator to show whether the role is publishable to client facing applications",
+							"type": "boolean"
+						},
+						"roleAppliesToSrcCtyCd": {
+							"description": "The country for which the role allocation applies",
+							"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+						},
+						"businessEntityTypeCd": {
+							"description": "The discriminator type for the business entity",
+							"$ref": "centralTeamManagementEnums.json#/definitions/EnumBusinessEntityType"
+						},
+						"businessEntity": {
+							"description": "The polymorphic business entity that the role relates. Company, Placement, Policy, Claim and Profile ",
+							"type": "object",
+							"oneOf": [
+								{
+									"$ref": "#/definitions/CompanyDetail"
+								},
+								{
+									"$ref": "#/definitions/PlacementDetail"
+								},
+								{
+									"$ref": "#/definitions/PolicyDetail"
+								},
+								{
+									"$ref": "#/definitions/ClaimDetail"
+								},
+								{
+									"$ref": "#/definitions/ProfileDetail"
+								}
+							]
+						}
+					},
+					"required": [
+						"roleCd",
+						"roleTypeCd",
+						"businessEntityTypeCd"
+					]
+				}
+			},
+			"required": [
+				"memberAllocationTypeCd",
+				"allocatingLocalIdSrcSysCd",
+				"allocatingLocalIdSrcCtyCd",
+				"memberDetails",
+				"businessEntityRoleDetail"
+			]
+		},
+		"CompanyDetail": {
+			"description": "Account ownership and management details for a company (CN)",
+			"type": "object",
+			"properties": {
+				"companyNr": {
+					"description": "This is the persistant global reference for the company from the MINA Company Master tables.  N.B this is not the MINA_ID which varies over time due to the matching process.",
+					"type": "string"
+				},
+				"alternateGlobalReference": {
+					"description": "An alternate Marsh Global identifier. This is used to transfer a secondary master reference to a party e.g. the MarketId (WIM Number) for markets is prevalent and used for entities with a market role on screens etc.  This elelment will normally only be used in addition to companyNr not instead of it.  It will typically be role specific.",
+					"type": "string"
+				},
+				"legalNm": {
+					"description": "The main name of the organisation - this is the legal name when a registered company.",
+					"type": "string"
+				},
+				"overrideNm": {
+					"description": "override name has precedence over business and legal names",
+					"type": "string"
+				},
+				"buyingStatusCd": {
+					"$ref": "companyEnums.json#/definitions/EnumBuyingStatus",
+					"description": "Identifies whether the account is a company, prospect etc."
+				},
+				"dunsNum": {
+					"description": "The unique reference for the company with D and B.",
+					"type": "string"
+				},
+				"marshForceManagedIn": {
+					"description": "Determines whether the company is managed in MarshForce.",
+					"type": "boolean"
+				},
+				"mipCd": {
+					"$ref": "companyEnums.json#/definitions/EnumMIP",
+					"description": "The Marsh Industry Practice for the company."
+				},
+				"segmentCd": {
+					"$ref": "companyEnums.json#/definitions/EnumSegment",
+					"description": "Identifies the Marsh segment for the company e.g. RMP, MM, CC."
+				},
+				"sicCd": {
+					"$ref": "companyEnums.json#/definitions/EnumSIC",
+					"description": "Marsh industry scheme based upon the Standard Industry Code hierarchy."
+				},
+				"statusCd": {
+					"$ref": "companyEnums.json#/definitions/EnumStatusCode"
+				},
+				"productLineCd": {
+					"description": "The code for the company product line allocation",
+					"type": "string"
+				},
+				"productLineNm": {
+					"description": "The name for the company product line allocation",
+					"type": "string"
+				},
+				"productSubGroupCd": {
+					"description": "The code for the company product sub group allocation",
+					"type": "string"
+				},
+				"productSubGroupNm": {
+					"description": "The name for the company product sub group allocation",
+					"type": "string"
+				}
+			},
+			"required": [
+				"companyNr"
+			]
+		},
+		"PlacementDetail": {
+			"title": "Placement detail",
+			"description": "Placement details to which the role and colleagues/teams have been allocated",
+			"type": "object",
+			"properties": {
+				"placementLocalId": {
+					"description": "Unique for the submitting system, country combination.",
+					"type": "string"
+				},
+				"placementLocalSrcSysCd": {
+					"description": "The source system for the local ID for the Placement. Must be a valid value from the code category table SRC_SYS_CD.",
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"placementlocalSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"placementProductLineCd": {
+					"description": "The product line code associated with the placement. These are the values taken from product master",
+					"type": "string"
+				},
+				"placementProductSubGroupCd": {
+					"description": "The product sub group code associated with the placement. These are the values taken from product master",
+					"type": "string"
+				}
+			},
+			"required": [
+				"placementLocalId",
+				"placementLocalSrcSysCd",
+				"placementlocalSrcCtyCd"
+			]
+		},
+		"PolicyDetail": {
+			"title": "Policy details",
+			"description": "Policy details to which the role and colleagues/teams have been allocated",
+			"type": "object",
+			"properties": {
+				"policyLocalId": {
+					"description": "Policy ID for the submitting system, country combination. Unique in combination with version ID.",
+					"type": "string"
+				},
+				"policyLocalVersionId": {
+					"description": "Policy Version ID for the submitting system, country combination. Unique in combination with Policy ID.",
+					"type": "string"
+				},
+				"policyLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"policyLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				}
+			},
+			"required": [
+				"policyLocalId"
+			]
+		},
+		"ClaimDetail": {
+			"title": "Claim details",
+			"description": "Claim details to which the role and colleagues/teams have been allocated",
+			"type": "object",
+			"properties": {
+				"claimLocalId": {
+					"description": "Claim ID for the submitting system, country combination. Unique.",
+					"type": "string"
+				},
+				"claimLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"claimLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				}
+			},
+			"required": [
+				"claimLocalId"
+			]
+		},
+		"ProfileDetail": {
+			"title": "Profile details",
+			"description": "Profile details to which the role and colleagues/teams have been allocated",
+			"type": "object",
+			"properties": {
+				"profileLocalId": {
+					"description": "Profile ID for the submitting system, country combination. Unique.",
+					"type": "string"
+				},
+				"profileTypeCd": {
+					"$ref": "centralTeamManagementEnums.json#/definitions/EnumBusinessEntityProfileType"
+				},
+				"profileLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"profileLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"profileZones": {
+					"description": "The Zone code array associated with the business profile",
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"items": false,
+							"properties": {
+								"profileZoneCd": {
+									"$ref": "marshCoreEnums.json#/definitions/EnumUSZone"
+								}
+							}
+						}
+					]
+				},
+				"profileOffices": {
+					"description": "The office code array associated with the business profile",
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"items": false,
+							"properties": {
+								"profileOfficeCd": {
+									"$ref": "marshCoreEnums.json#/definitions/EnumOfficeCode"
+								}
+							}
+						}
+					]
+				},
+				"profilePlacementHubs": {
+					"description": "The placement hub code array associated with the business profile",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"items": false,
+						"properties": {
+							"profilePlacementHubCd": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"profileProductLines": {
+					"description": "The product line array associated with the business profile",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"items": false,
+						"properties": {
+							"profileProductLineCd": {
+								"description": "The product line code associated with the profile. These are the values taken from product master",
+								"type": "string"
+							}
+						}
+					}
+				},
+				"profileProductGroups": {
+					"description": "The product group array associated with the business profile",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"items": false,
+						"properties": {
+							"profileProductGroupCd": {
+								"description": "The group code associated with the profile. These are the values taken from product master",
+								"type": "string"
+							}
+						}
+					}
+				},
+				"profileSegments": {
+					"description": "The segment code array associated with the business profile",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"items": false,
+						"properties": {
+							"profileSegmentCd": {
+								"description": "Segment code for profile",
+								"type": "string"
+							}
+						}
+					}
+				},
+				"profileRegions": {
+					"description": "The region code array associated with the business profile",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"profileRegion": {
+								"$ref": "marshCoreEnums.json#/definitions/EnumTerritory"
+							}
+						}
+					}
+				}
+			},
+			"required": [
+				"profileLocalId",
+				"profileTypeCd",
+				"profileLocalIdSrcSysCd",
+				"profileLocalIdSrcCtyCd"
+			]
+		},
+		"Program": {
+			"type": "object",
+			"items": {
+				"properties": {
+					"programLocalId": {
+						"description": "The unique local reference for the Program.",
+						"type": "string"
+					},
+					"programVersionLocalId": {
+						"description": "The unique local reference for the program version. If the local system does not support versioning, then the identifier should be set to 1 - to mean version 1.",
+						"type": "string"
+					},
+					"programLocalIdSrcCtyCd": {
+						"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+					},
+					"programLocalIdSrcSysCd": {
+						"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+					}
+				}
+			},
+			"properties": {
+				"programLocalId": {
+					"description": "The unique local reference for the Program.",
+					"type": "string"
+				},
+				"programVersionLocalId": {
+					"description": "The unique local reference for the program version. If the local system does not support versioning, then the identifier should be set to 1 - to mean version 1.",
+					"type": "string"
+				},
+				"programLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"programLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				}
+			}
+		}
+	},
+	"$id": "roleDetails"
+}

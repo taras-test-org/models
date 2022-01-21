@@ -1,0 +1,311 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$ref": "#/definitions/AuditStamp",
+	"description": "Marsh Core Components  Release 20.05",
+	"definitions": {
+		"AuditStamp": {
+			"description": "Identifies when the object was created/updated and by whom.",
+			"type": "object",
+			"items": false,
+			"properties": {
+				"userLocalSystemCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem",
+					"description": "The global code for the system instance."
+				},
+				"userLocalSystemCountryCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry",
+					"description": "The country in which the instance resides or to which it applies."
+				},
+				"createDtTm": {
+					"description": "The date and time when the object was created by the source system.",
+					"type": "string",
+					"format": "date-time"
+				},
+				"createUserId": {
+					"description": "The local system user ID of the user that created the object.",
+					"type": "string"
+				},
+				"createUserNm": {
+					"description": "The name of the user that created the object.",
+					"type": "string"
+				},
+				"updateDtTm": {
+					"description": "The date and time when the object was updated by the source system.",
+					"type": "string",
+					"format": "date-time"
+				},
+				"updateUserId": {
+					"description": "The local system user ID of the user that updated the object.",
+					"type": "string"
+				},
+				"updateUserNm": {
+					"description": "The name of the user that updated the object.",
+					"type": "string"
+				}
+			},
+			"required": [
+				"userLocalSystemCd",
+				"userLocalSystemCountryCd",
+				"createDtTm",
+				"createUserId",
+				"createUserNm",
+				"updateDtTm",
+				"updateUserId",
+				"updateUserNm"
+			]
+		},
+		"LocalSystemId": {
+			"description": "Identifies a local system and its ID for the entity.",
+			"type": "object",
+			"properties": {
+				"localSystemCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem",
+					"description": "The global code for the system instance."
+				},
+				"localSystemCountryCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry",
+					"description": "The country in which the instance resides or to which it applies."
+				},
+				"localSystemId": {
+					"description": "The unique reference for the party on the local system.",
+					"type": "string"
+				}
+			},
+			"required": [
+				"localSystemCd",
+				"localSystemCountryCd",
+				"localSystemId"
+			],
+			"additionalProperties": false
+		},
+		"MarshMessage": {
+			"description": "The standard Marsh message payload structure.",
+			"type": "object",
+			"properties": {
+				"batchId": {
+					"type": "number"
+				},
+				"correlationMessageId": {
+					"type": "string"
+				},
+				"languageCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumLanguage"
+				},
+				"messageId": {
+					"type": "string"
+				},
+				"originatingCountryCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"originatingSystemCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"schemaVersion": {
+					"type": "string"
+				},
+				"targetInstance": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"messageId",
+				"originatingCountryCd",
+				"originatingSystemCd",
+				"schemaVersion"
+			],
+			"additionalProperties": false
+		},
+		"MarshResponse": {
+			"description": "The standard Marsh response structure that should be extended for all response messages.",
+			"type": "object",
+			"properties": {
+				"responseStatusCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumStatusCode",
+					"description": "Indicates whether the service request processing completed ok, with warnings or failed to complete with errors."
+				},
+				"exception": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"responseStatusCd"
+			],
+			"additionalProperties": false
+		},
+		"MarshResponseMessage": {
+			"description": "The standard Marsh response message payload.",
+			"type": "object",
+			"properties": {
+				"batchId": {
+					"type": "number"
+				},
+				"correlationMessageId": {
+					"type": "string"
+				},
+				"languageCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumLanguage"
+				},
+				"messageId": {
+					"type": "string"
+				},
+				"originatingCountryCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				},
+				"originatingSystemCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"schemaVersion": {
+					"type": "string"
+				},
+				"targetInstance": {
+					"type": "string"
+				},
+				"marshResponseStatus": {
+					"$ref": "#/definitions/MarshResponse",
+					"description": "Identifies whether or not the service method completed successfully and identifies any errors or warnings."
+				}
+			},
+			"required": [
+				"messageId",
+				"originatingCountryCd",
+				"originatingSystemCd",
+				"schemaVersion",
+				"marshResponseStatus"
+			],
+			"additionalProperties": false
+		},
+		"Organisation": {
+			"description": "An organisation or legal entity.",
+			"type": "object",
+			"properties": {
+				"dunsNumber": {
+					"description": "The unique reference for the company with D and B.",
+					"type": "string"
+				},
+				"mainAddress": {
+					"$ref": "#/definitions/PostalAddress",
+					"description": "The main address of the organisation - this is the registered address when a legal entity."
+				},
+				"mainNm": {
+					"description": "The main name of the organisation - this is the legal name when a registered company.",
+					"type": "string"
+				},
+				"orgRecordTypeCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumOrgType",
+					"description": "The record type i.e. BE or BR will be provided on response messages where the record type could be one of BE or BR.  Where the record type is clear from the context this may be omitted."
+				},
+				"partyDisplayNm": {
+					"description": "This will be the party's name as typically displayed.",
+					"type": "string"
+				},
+				"partyId": {
+					"$ref": "#/definitions/PartyId",
+					"description": "One or more unique identifiers for the party."
+				},
+				"statusCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumStatusCode",
+					"description": "Identifies whether the party is active, expired, draft or deleted."
+				}
+			},
+			"required": [
+				"partyId"
+			],
+			"additionalProperties": false
+		},
+		"Party": {
+			"description": "The basic entity that defines people, organisation or groups of entities.",
+			"type": "object",
+			"properties": {
+				"partyDisplayNm": {
+					"description": "This will be the party's name as typically displayed.",
+					"type": "string"
+				},
+				"partyId": {
+					"$ref": "#/definitions/PartyId",
+					"description": "One or more unique identifiers for the party."
+				},
+				"statusCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumStatusCode",
+					"description": "Identifies whether the party is active, expired, draft or deleted."
+				}
+			},
+			"required": [
+				"partyId"
+			],
+			"additionalProperties": false
+		},
+		"PartyId": {
+			"description": "The standard Identity type.",
+			"type": "object",
+			"properties": {
+				"alternateGlobalReference": {
+					"description": "An alternate Marsh Global identifier. This is used to transfer a secondary master reference to a party e.g. the MarketId (WIM Number) for markets is prevalent and used for entities with a market role on screens etc.  This elelment will normally only be used in addition to companyNr not instead of it.  It will typically be role specific.",
+					"type": "string"
+				},
+				"companyNr": {
+					"description": "This is the persistant global reference for the company from the MINA Company Master tables.  N.B this is not the MINA_ID which varies over time due to the matching process.",
+					"type": "string"
+				},
+				"localSystemPartyId": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/LocalSystemId",
+						"description": "The unique reference from a local system instance for the party."
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"PostalAddress": {
+			"description": "The standard Marsh postal address.",
+			"type": "object",
+			"properties": {
+				"addressLine1": {
+					"description": "First line of the address.",
+					"type": "string"
+				},
+				"addressLine2": {
+					"description": "Optional second line of address.",
+					"type": "string"
+				},
+				"addressLine3": {
+					"description": "Optional third line of address.",
+					"type": "string"
+				},
+				"addressLine4": {
+					"description": "Optional fourth line of address.",
+					"type": "string"
+				},
+				"townCityNm": {
+					"title": "Town City Name",
+					"description": "Postal town or city name.",
+					"type": "string"
+				},
+				"postalCode": {
+					"description": "The post code or Zip for the address.  Mandatory for many countries.",
+					"type": "string"
+				},
+				"stateProvinceCd": {
+					"title": "State Provice Code",
+					"description": "State or province code e.g., KS for Kansas, NB for New Brunswick",
+					"type": "string"
+				},
+				"stateProvinceNm": {
+					"title": "State or Province Name",
+					"description": "The formal name of the state or province e.g., Kansas, New Brunswick",
+					"type": "string"
+				},
+				"countryCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry",
+					"description": "The ISO country for the address."
+				},
+				"countryNm": {
+					"title": "Country Name",
+					"description": "The formal company name for the country code. ",
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

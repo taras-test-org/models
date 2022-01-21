@@ -1,0 +1,60 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://marsh.com/schemas/2005/latest/team/teamEnums.json",
+	"description": "Marsh Team Enumerations Release 01.01",
+	"definitions": {
+		"EnumRoleFunctionType": {
+			"type": "string",
+			"enum": [
+				"ROLE_TYPE_FUNCTION",
+				"ROLE_TYPE_SECURITY"
+			]
+		},
+		"EnumBusinessEntityType": {
+			"type": "string",
+			"enum": [
+				"BUSINESS_ENTITY_TYPE_ACCOUNT",
+				"BUSINESS_ENTITY_TYPE_PLACEMENT",
+				"BUSINESS_ENTITY_TYPE_POLICY",
+				"BUSINESS_ENTITY_TYPE_CLAIM",
+				"BUSINESS_ENTITY_TYPE_PROFILE"
+			]
+		},
+		"EnumMemberAllocationType": {
+			"type": "string",
+			"enum": [
+				"MEMBER_ALLOCATION_COLLEAGUE",
+				"MEMBER_ALLOCATION_TEAM"
+			]
+		},
+		"EnumBusinessEntityProfileType": {
+			"type": "string",
+			"enum": [
+				"BUSINESS_ENTITY_PROFILE_TYPE_LEADERS",
+				"BUSINESS_ENTITY_PROFILE_TYPE_OPERATIONS",
+				"BUSINESS_ENTITY_PROFILE_TYPE_COLLEAGUES",
+				"BUSINESS_ENTITY_PROFILE_TYPE_ADMINISTRATORS"
+			]
+		},
+		"EnumCtmSearchParameterKeys": {
+			"type": "string",
+			"enum": [
+				"PEOPLESOFT_ID",
+				"USER_ID",
+				"TEAM_ID",
+				"BUSINESS_ENTITY_TYPE_CD",
+				"COMPANY_NR",
+				"PLACEMENT_LOCAL_ID",
+				"PROFILE_LOCAL_ID",
+				"EMAIL"
+			]
+		},
+		"EnumTeamSearchParameterKeys": {
+			"type": "string",
+			"enum": [
+				"TEAM_ID",
+				"TEAM_NAME"
+			]
+		}
+	}
+}

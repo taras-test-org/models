@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$ref": "#/definitions/Team",
+	"definitions": {
+		"Team": {
+			"$id": "team",
+			"title": "team",
+			"description": "Team membership",
+			"type": "object",
+			"properties": {
+				"teamId": {
+					"type": "string"
+				},
+				"teamName": {
+					"description": "The name of the Team",
+					"type": "string"
+				},
+				"teamDescription": {
+					"description": "The description of the purposes for the team",
+					"type": "string"
+				},
+				"teamMembers": {
+					"type": "array",
+					"items": {
+						"$ref": "colleague.json#/definitions/Colleague"
+					}
+				},
+				"teamLeader": {
+					"$ref": "colleague.json#"
+				},
+				"teamAuditDetail": {
+					"$ref": "marshCore.json#/definitions/AuditStamp"
+				},
+				"teamLocalIdSrcSysCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumSourceSystem"
+				},
+				"teamLocalIdSrcCtyCd": {
+					"$ref": "marshCoreEnums.json#/definitions/EnumCountry"
+				}
+			},
+			"required": [
+				"teamName",
+				"teamDescription",
+				"teamMembers"
+			]
+		}
+	}
+}

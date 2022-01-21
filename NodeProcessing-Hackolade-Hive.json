@@ -1,0 +1,1765 @@
+{
+    "modelName": "New model",
+    "collections": [
+        {
+            "collectionName": "Node Inbound Advanced Shipment Number",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "asnNumber",
+                    "name": "ASN Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "ASN Number",
+                    "GUID": "74b867c0-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "74b840b0-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "collectionUsers": [],
+            "GUID": "74b819a0-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeInboundASN",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Appointment",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "appointmentNumber",
+                    "name": "Appointment Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Number",
+                    "description": "Unique identifier for appointments in WM",
+                    "example": "Q000000046",
+                    "GUID": "751c32a0-5846-11ec-82c9-c5624d4a5464",
+                    "error": {},
+                    "childRelationships": [
+                        "bc0916b0-5846-11ec-82c9-c5624d4a5464"
+                    ]
+                },
+                {
+                    "code": "appointmentTypeCode",
+                    "name": "Appointment Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Type Code",
+                    "description": "This field identified the purpose of the appointment. Possible values are :\n- Live Unload -The trailer is unloaded but the tractor is still attached.\n- Drop Unload - The loaded trailer is dropped in the yard. The loaded trailer will be moved to the correct dock for unloading at a later point in time.\n- Live Load - The trailer is loaded but the tractor is still attached.\n- Pickup Load - An empty trailer was loaded at the dock. The driver arrives at a later point in time to pick up the loaded trailer.\n- Pickup Empty - The driver has come to pick up an empty trailer.\n- Drop Empty - The driver has come to drop off an empty trailer. ",
+                    "example": "LIVE_UNLOAD",
+                    "GUID": "751c32a1-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentStatusCode",
+                    "name": "Appointment Status Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Status Code",
+                    "description": "This field represent the current state of the appointment. Possible values are :\n- 1000 - Requested\n- 2000 - Countered\n- 3000 - Scheduled\n- 4000 - Checked_In\n- 8000 - Complete\n- 9000 - Cancelled",
+                    "example": "4000",
+                    "GUID": "751c32a2-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "nodeLocationCode",
+                    "name": "Node Location Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Location Code",
+                    "description": "Plant code of the source yard for the appointment",
+                    "example": "1067",
+                    "GUID": "751c32a3-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentScheduledTimestamp",
+                    "name": "Appointment Scheduled Date Time",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Appointment Scheduled Date Time",
+                    "description": "This time represents the preferred time for the carrier to arrive at the facility. The time zone is UTC",
+                    "example": "2021-09-03T22:00:00",
+                    "GUID": "751c32a4-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "estimatedDepartureTimestamp",
+                    "name": "Estimated Departure Date Time",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Estimated Departure Date Time",
+                    "description": "This time represents the latest time the carrier needs to leave the facility. The time zone is UTC",
+                    "example": "2021-09-09T23:59:00",
+                    "GUID": "751c32a5-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "transportHolderNumber",
+                    "name": "Transport Holder Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Transport Holder Number",
+                    "description": "This is an identifier of the physical trailer used for the appointment",
+                    "example": "KS16417",
+                    "GUID": "751c32a6-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "carrierCode",
+                    "name": "Carrier Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Carrier Code",
+                    "description": "This specifies the carrier that will load or unload the goods on the appointment",
+                    "example": "UPSN",
+                    "GUID": "751c32a7-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "pickupNumber",
+                    "name": "Pickup Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Pickup Number",
+                    "description": "This field is used to look up appointments for pickup check in in PINC. ",
+                    "example": "123456",
+                    "GUID": "751c32a8-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentCommentText",
+                    "name": "Appointment Comment Text",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Comment Text",
+                    "description": "This field contains free text ",
+                    "example": "free text",
+                    "GUID": "751c32a9-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentCreationTimestamp",
+                    "name": "Appointment Creation Date Time",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Appointment Creation Date Time",
+                    "description": "This field represents the actual date and time the appointment was created. The time zone is UTC",
+                    "example": "2021-09-08T07:18:00.663",
+                    "GUID": "751c32aa-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentCreationUserIdentifier",
+                    "name": "Appointment Creation User Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Creation User Identifier",
+                    "description": "This field represents the person that created the appointment",
+                    "example": "BTHIJS",
+                    "GUID": "751c32ab-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentUpdateTimestamp",
+                    "name": "Appointment Update Date Time",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Appointment Update Date Time",
+                    "description": "This field represents the actual date and time the appointment was updated. The time zone is UTC",
+                    "example": "2021-09-08T07:18:00.663",
+                    "GUID": "751c32ac-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "appointmentUpdateUserIdentifier",
+                    "name": "Appointment Update User Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Appointment Update User Identifier",
+                    "description": "This field represents the person that updated the appointment",
+                    "example": "BTHIJS",
+                    "GUID": "751c32ad-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "",
+                    "name": "nodeTransportHolder",
+                    "isActivated": true,
+                    "$ref": "#/components/schemas/nodeTransportHolder",
+                    "GUID": "751c32ae-5846-11ec-82c9-c5624d4a5464",
+                    "type": "reference",
+                    "refType": "external",
+                    "refIdPath": [
+                        "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                        "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                    ],
+                    "error": {}
+                },
+                {
+                    "code": "nodeOutboundShipments",
+                    "name": "Node Outbound Shipments",
+                    "isActivated": true,
+                    "subtype": "array<txt>",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "751c32b1-5846-11ec-82c9-c5624d4a5464",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "$ref": "#/components/schemas/nodeOutboundShipment",
+                            "type": "reference",
+                            "refType": "external",
+                            "refIdPath": [
+                                "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                                "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                            ],
+                            "error": {}
+                        }
+                    ],
+                    "primaryKey": false,
+                    "additionalItems": true,
+                    "uniqueItems": false,
+                    "childType": "array",
+                    "type": "array",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Outbound Shipments",
+                    "GUID": "751c32af-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "nodeInboundDeliveries",
+                    "name": "Node Inbound Deliveries",
+                    "isActivated": true,
+                    "subtype": "array<txt>",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "751c32b2-5846-11ec-82c9-c5624d4a5464",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "$ref": "#/components/schemas/nodeInboundDelivery",
+                            "type": "reference",
+                            "refType": "external",
+                            "refIdPath": [
+                                "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                                "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                            ],
+                            "error": {}
+                        }
+                    ],
+                    "primaryKey": false,
+                    "additionalItems": true,
+                    "uniqueItems": false,
+                    "childType": "array",
+                    "type": "array",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Inbound Deliveries",
+                    "GUID": "751c32b0-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "751c0b91-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "GUID": "751c0b90-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeAppointment",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Transport Holder",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "transportHolderNumber",
+                    "name": "Transport Holder Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Transport Holder Number",
+                    "description": "This is an identifier of the physical trailer used for the shipment/appointment ",
+                    "example": "KS16417",
+                    "GUID": "7599ee20-5846-11ec-82c9-c5624d4a5464",
+                    "error": {},
+                    "childRelationships": [
+                        "ca134be0-5846-11ec-82c9-c5624d4a5464"
+                    ]
+                },
+                {
+                    "code": "transportHolderTypeCode",
+                    "name": "Transport Holder Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Transport Holder Type Code",
+                    "description": "This describes the general type of transport holder.  Typical types are Trailer, Container.",
+                    "example": "TRAILER",
+                    "GUID": "7599ee21-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "trailerLicenseplateNumber",
+                    "name": "Trailer Licenseplate Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Trailer Licenseplate Number",
+                    "description": "This is the licenseplate number of the trailer",
+                    "example": "1-AAA-123",
+                    "GUID": "7599ee22-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "visitTypeCode",
+                    "name": "Visit Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Visit Type Code",
+                    "description": "This field identified the purpose of the trailer. Possible values are :\n- Live Unload -The trailer is unloaded but the tractor is still attached.\n- Drop Unload - The loaded trailer is dropped in the yard. The loaded trailer \n will be moved to the correct dock for unloading at a later point in time.\n- Live Load - The trailer is loaded but the tractor is still attached.\n- Pickup Load - An empty trailer was loaded at the dock. The driver arrives at a later point in time to pick up the loaded trailer.\n- Pickup Empty - The driver has come to pick up an empty trailer.\n- Drop Empty - The driver has come to drop off an empty trailer. ",
+                    "example": "LIVE_UNLOAD",
+                    "GUID": "7599ee23-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "carrierCode",
+                    "name": "Carrier Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Carrier Code",
+                    "description": "This specifies the carrier for whitch the trailer holds the goods",
+                    "example": "UPSN",
+                    "GUID": "7599ee24-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "locationReferenceTypeCode",
+                    "name": "Location Reference Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Location Reference Type Code",
+                    "description": "Yard Slot or Dock Door",
+                    "example": "Yard Slot",
+                    "GUID": "7599ee25-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "locationReferenceCode",
+                    "name": "Location Reference Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Location Reference Code",
+                    "description": "This is the location where the trailer is currently at (Yard slot or dock door)",
+                    "example": "4352",
+                    "GUID": "7599ee26-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "checkInTimestamp",
+                    "name": "Check In Timestamp",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Check In Timestamp",
+                    "description": "This is the time the trailer was checked in on the yard",
+                    "example": "2021-09-08T22:00:00",
+                    "GUID": "7599ee27-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "checkInAgentUserIdentifier",
+                    "name": "Check in Agent User Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Check in Agent User Identifier",
+                    "description": "This is the person that did the check-in.",
+                    "example": "bthijs",
+                    "GUID": "7599ee28-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "checkOutTimestamp",
+                    "name": "Check Out Timestamp",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Check Out Timestamp",
+                    "description": "This is the time the trailer was checked out from the yard",
+                    "example": "2021-09-08T22:00:00",
+                    "GUID": "7599ee29-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "checkOutAgentUserIdentifier",
+                    "name": "Check Out Agent User Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Check Out Agent User Identifier",
+                    "description": "This is the person that did the check-out.",
+                    "example": "bthijs",
+                    "GUID": "7599ee2a-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "transportHolderTypeSizeCode",
+                    "name": "Transport Holder Type Size Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Transport Holder Type Size Code",
+                    "description": "This field represent the equipment type value used in Manhattan. This indicated the size of the trailer.",
+                    "example": "Trailer (57cube)",
+                    "GUID": "7599ee2b-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "loadStatusCode",
+                    "name": "Load Status Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Load Status Code",
+                    "description": "This field indicates if the trailer is fully or partially loaded \n- Loaded - Trailer is fully loaded\n- Loading - Trailer is partially loaded",
+                    "example": "Loaded",
+                    "GUID": "7599ee2c-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "sealNumber",
+                    "name": "Seal Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Seal Number",
+                    "description": "This field contains the seal number of the trailer",
+                    "example": "123456789",
+                    "GUID": "7599ee2d-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "loadedPercent",
+                    "name": "Loaded Percent",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Loaded Percent",
+                    "description": "This field indicates the percentage of the trailer that is loaded",
+                    "example": "85",
+                    "GUID": "7599ee2e-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "proNumber",
+                    "name": "Pro Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Pro Number",
+                    "description": "Carrier Manifest Number ( used as CMR in EMEA )",
+                    "example": "1456789",
+                    "GUID": "7599ee2f-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "7599c711-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "GUID": "7599c710-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeTransportHolder",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Inbound Delivery Event",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "eventName",
+                    "name": "Event Name",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Name",
+                    "description": "Event name represent to process step that triggered the event.  Possible values are :\n\n - Inbound_Delivery_ASN - This event is triggered each time an inbound/outbound\nshipment is created or updated",
+                    "example": "Inbound_Delivery_ASN",
+                    "GUID": "75fde010-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTypeCode",
+                    "name": "Event Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Type Code",
+                    "description": "Event type specifies the action of the event.\n- TBD",
+                    "example": "create",
+                    "GUID": "75fde011-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTimeZoneCode",
+                    "name": "Event TimeZone Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event TimeZone Code",
+                    "description": "This should represent the data fields timezone with offset\n",
+                    "example": "UTC-10:00",
+                    "GUID": "75fde012-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventIdentifier",
+                    "name": "Event Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Identifier",
+                    "description": "ID is unique identifier to identify downstream ",
+                    "example": "1234567",
+                    "GUID": "75fde013-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTimestamp",
+                    "name": "Event Timestamp",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Event Timestamp",
+                    "description": "Event creation timestamp",
+                    "example": "2021-09-08T07:18:00",
+                    "GUID": "75fde014-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "inboundDeliveryNumber",
+                    "name": "Node Inbound Delivery Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Inbound Delivery Number",
+                    "GUID": "75fde015-5846-11ec-82c9-c5624d4a5464",
+                    "required": false,
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+                    "foreignField": [
+                        "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+                        "77ca62b1-5846-11ec-82c9-c5624d4a5464"
+                    ],
+                    "parentRelationship": "d4afd190-5846-11ec-82c9-c5624d4a5464"
+                },
+                {
+                    "code": "",
+                    "name": "nodeInboundDelivery",
+                    "isActivated": true,
+                    "$ref": "#/components/schemas/nodeInboundDelivery",
+                    "GUID": "75fde016-5846-11ec-82c9-c5624d4a5464",
+                    "type": "reference",
+                    "refType": "external",
+                    "refIdPath": [
+                        "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                        "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                    ],
+                    "required": false,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "75fdb901-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "collectionUsers": [],
+            "GUID": "75fdb900-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeInboundDeliveryEvent",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Appointment Event",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "eventName",
+                    "name": "Event Name",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Name",
+                    "description": "Event name represent to process step that triggered the event.  Possible values are :\n- Appointment - This event is triggered each time an appointment creation, update or cancelled",
+                    "example": "Appointment",
+                    "GUID": "768a1a82-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTypeCode",
+                    "name": "Event Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Type Code",
+                    "description": "Event type specifies the action of the event.\n- For Inbound_Delivery_ASN events that type is always 'create'\n- For Appointment events possible types are 'create' , 'update' , check-in' , ' cancel', 'close'\n- For Trailer events possible types are 'move' , 'close'",
+                    "example": "create",
+                    "GUID": "768a1a83-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTimeZoneCode",
+                    "name": "Event TimeZone Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event TimeZone Code",
+                    "description": "This should represent the data fields timezone with offset\n",
+                    "example": "UTC-10:00",
+                    "GUID": "768a1a84-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventIdentifier",
+                    "name": "Event Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Identifier",
+                    "description": "ID is unique identifier to identify downstream ",
+                    "example": "1234567",
+                    "GUID": "768a4190-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "eventTimestamp",
+                    "name": "Event Timestamp",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Event Timestamp",
+                    "description": "Event creation timestamp",
+                    "example": "2021-09-08T07:18:00",
+                    "GUID": "768a4191-5846-11ec-82c9-c5624d4a5464",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "code": "appointmentNumber",
+                    "name": "Node Appointment Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Appointment Number",
+                    "GUID": "768a4192-5846-11ec-82c9-c5624d4a5464",
+                    "required": false,
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "751c0b90-5846-11ec-82c9-c5624d4a5464",
+                    "foreignField": [
+                        "751c0b90-5846-11ec-82c9-c5624d4a5464",
+                        "751c32a0-5846-11ec-82c9-c5624d4a5464"
+                    ],
+                    "parentRelationship": "bc0916b0-5846-11ec-82c9-c5624d4a5464"
+                },
+                {
+                    "code": "",
+                    "name": "nodeAppointment",
+                    "isActivated": true,
+                    "$ref": "#/components/schemas/nodeAppointment",
+                    "GUID": "768a4193-5846-11ec-82c9-c5624d4a5464",
+                    "type": "reference",
+                    "refType": "external",
+                    "refIdPath": [
+                        "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                        "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                    ],
+                    "required": false,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "768a1a81-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "collectionUsers": [],
+            "GUID": "768a1a80-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeAppointmentEvent",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Transport Holder Event",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "Event_Name",
+                    "name": "Event Name",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Name",
+                    "description": "Event name represent to process step that triggered the event.  Possible values are :\n- Trailer Event - This event is created each time a trailer is Check-in , moved and checked-out",
+                    "example": "Trailer",
+                    "GUID": "7748af91-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "Event_Type_Code",
+                    "name": "Event Type Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Type Code",
+                    "description": "Event type specifies the action of the event.\n- For Inbound_Delivery_ASN events that type is always 'create'\n- For Appointment events possible types are 'create' , 'update' , check-in' , ' cancel', 'close'\n- For Trailer events possible types are 'move' , 'close'",
+                    "example": "move",
+                    "GUID": "7748af92-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "Event_TimeZone_Code",
+                    "name": "Event TimeZone Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event TimeZone Code",
+                    "description": "This should represent the data fields timezone with offset\n",
+                    "example": "UTC-10:00",
+                    "GUID": "7748af93-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "Event_Identifier",
+                    "name": "Event Identifier",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Event Identifier",
+                    "description": "ID is unique identifier to identify downstream ",
+                    "example": "1234567",
+                    "GUID": "7748af94-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "Event_Timestamp",
+                    "name": "Event Timestamp",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "format": "date-time",
+                    "title": "Event Timestamp",
+                    "description": "Event creation timestamp",
+                    "example": "2021-09-08T07:18:00",
+                    "GUID": "7748af95-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "Transport_Holder_Number",
+                    "name": "Transport Holder Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Transport Holder Number",
+                    "GUID": "7748af96-5846-11ec-82c9-c5624d4a5464",
+                    "error": {},
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "7599c710-5846-11ec-82c9-c5624d4a5464",
+                    "foreignField": [
+                        "7599c710-5846-11ec-82c9-c5624d4a5464",
+                        "7599ee20-5846-11ec-82c9-c5624d4a5464"
+                    ],
+                    "parentRelationship": "ca134be0-5846-11ec-82c9-c5624d4a5464"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "7748af90-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "collectionUsers": [],
+            "GUID": "77486170-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeTransportHolderEvent",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Inbound Delivery",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "inboundDeliveryNumber",
+                    "name": "Inbound Delivery Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Inbound Delivery Number",
+                    "description": "For inbound appointments the shipment number represent the Inbound Delivery carrying products from multiple vendors to the warehouse. One or multiple ASN can be assigned to an Inbound Delivery. One or multiple Inbound Deliveries can be assigned to an appointment\n\nFor outbound appointments the shipment number represents a shipment carrying cartons for multiple customers from the warehouse. One or multiple outbound shipments can be assigned to an appointment",
+                    "example": "CS00001245",
+                    "GUID": "77ca62b1-5846-11ec-82c9-c5624d4a5464",
+                    "error": {},
+                    "childRelationships": [
+                        "d4afd190-5846-11ec-82c9-c5624d4a5464"
+                    ]
+                },
+                {
+                    "code": "nodeLocationCode",
+                    "name": "Node Location Code",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Node Location Code",
+                    "description": "Plant code of the Inbound Delivery",
+                    "example": "1067",
+                    "GUID": "77ca62b2-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                },
+                {
+                    "code": "nodeInboundAsns",
+                    "name": "nodeInboundASNs",
+                    "isActivated": true,
+                    "subtype": "array<txt>",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "77ca62b4-5846-11ec-82c9-c5624d4a5464",
+                            "arrayItem": true,
+                            "arrayParentType": "array",
+                            "$ref": "#/components/schemas/nodeInboundAsn",
+                            "type": "reference",
+                            "refType": "external",
+                            "refIdPath": [
+                                "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+                                "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+                            ],
+                            "error": {}
+                        }
+                    ],
+                    "primaryKey": false,
+                    "additionalItems": true,
+                    "uniqueItems": false,
+                    "childType": "array",
+                    "type": "array",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "nodeInboundASNs",
+                    "GUID": "77ca62b3-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "77ca62b0-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "collectionUsers": [],
+            "GUID": "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeInboundDelivery",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "collectionName": "Node Outbound Shipment",
+            "type": "object",
+            "properties": [
+                {
+                    "code": "shipmentNumber",
+                    "name": "Shipment Number",
+                    "isActivated": true,
+                    "primaryKey": false,
+                    "mode": "string",
+                    "childType": "text",
+                    "type": "string",
+                    "compositeKey": [
+                        "compositePartitionKey",
+                        "compositeClusteringKey"
+                    ],
+                    "compositePartitionKey": false,
+                    "compositeClusteringKey": false,
+                    "title": "Shipment Number",
+                    "description": "For inbound appointments the shipment number represent the Inbound Delivery carrying products from multiple vendors to the warehouse. One or multiple ASN can be assigned to an Inbound Delivery. One or multiple Inbound Deliveries can be assigned to an appointment\n\nFor outbound appointments the shipment number represents a shipment carrying cartons for multiple customers from the warehouse. One or multiple outbound shipments can be assigned to an appointment",
+                    "example": "CS00001245",
+                    "GUID": "78204ae2-5846-11ec-82c9-c5624d4a5464",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "GUID": "78204ae1-5846-11ec-82c9-c5624d4a5464",
+                "properties": []
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "collectionUsers": [],
+            "GUID": "78204ae0-5846-11ec-82c9-c5624d4a5464",
+            "code": "nodeOutboundShipment",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "Node Processing",
+            "type": "bucket",
+            "collectionIds": [
+                "74b819a0-5846-11ec-82c9-c5624d4a5464",
+                "751c0b90-5846-11ec-82c9-c5624d4a5464",
+                "7599c710-5846-11ec-82c9-c5624d4a5464",
+                "75fdb900-5846-11ec-82c9-c5624d4a5464",
+                "768a1a80-5846-11ec-82c9-c5624d4a5464",
+                "77486170-5846-11ec-82c9-c5624d4a5464",
+                "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+                "78204ae0-5846-11ec-82c9-c5624d4a5464"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "indexes": [],
+            "GUID": "84031e20-5844-11ec-82c9-c5624d4a5464",
+            "code": "node-processing"
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk Node Appointment.Appointment Number to Node Appointment Event.Node Appointment Number",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "751c0b90-5846-11ec-82c9-c5624d4a5464",
+                    "751c32a0-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "768a1a80-5846-11ec-82c9-c5624d4a5464",
+                    "768a4192-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "childCardinality": "1",
+            "customProperties": {
+                "disableNoValidate": true
+            },
+            "parentCollection": "751c0b90-5846-11ec-82c9-c5624d4a5464",
+            "childCollection": "768a1a80-5846-11ec-82c9-c5624d4a5464",
+            "GUID": "bc0916b0-5846-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "name": "fk Node Transport Holder.Transport Holder Number to Node Transport Holder Event.Transport Holder Number",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "7599c710-5846-11ec-82c9-c5624d4a5464",
+                    "7599ee20-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "77486170-5846-11ec-82c9-c5624d4a5464",
+                    "7748af96-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "childCardinality": "1",
+            "customProperties": {
+                "disableNoValidate": true
+            },
+            "parentCollection": "7599c710-5846-11ec-82c9-c5624d4a5464",
+            "childCollection": "77486170-5846-11ec-82c9-c5624d4a5464",
+            "GUID": "ca134be0-5846-11ec-82c9-c5624d4a5464"
+        },
+        {
+            "name": "fk Node Inbound Delivery.Inbound Delivery Number to Node Inbound Delivery Event.Node Inbound Delivery Number",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+                    "77ca62b1-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "75fdb900-5846-11ec-82c9-c5624d4a5464",
+                    "75fde015-5846-11ec-82c9-c5624d4a5464"
+                ]
+            ],
+            "childCardinality": "1",
+            "customProperties": {
+                "disableNoValidate": true
+            },
+            "parentCollection": "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+            "childCollection": "75fdb900-5846-11ec-82c9-c5624d4a5464",
+            "GUID": "d4afd190-5846-11ec-82c9-c5624d4a5464"
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "84031e20-5844-11ec-82c9-c5624d4a5464": "Node Processing",
+        "74b867c0-5846-11ec-82c9-c5624d4a5464": "ASN Number",
+        "74b819a0-5846-11ec-82c9-c5624d4a5464": "Node Inbound Advanced Shipment Number",
+        "751c32a0-5846-11ec-82c9-c5624d4a5464": "Appointment Number",
+        "751c32a1-5846-11ec-82c9-c5624d4a5464": "Appointment Type Code",
+        "751c32a2-5846-11ec-82c9-c5624d4a5464": "Appointment Status Code",
+        "751c32a3-5846-11ec-82c9-c5624d4a5464": "Node Location Code",
+        "751c32a4-5846-11ec-82c9-c5624d4a5464": "Appointment Scheduled Date Time",
+        "751c32a5-5846-11ec-82c9-c5624d4a5464": "Estimated Departure Date Time",
+        "751c32a6-5846-11ec-82c9-c5624d4a5464": "Transport Holder Number",
+        "751c32a7-5846-11ec-82c9-c5624d4a5464": "Carrier Code",
+        "751c32a8-5846-11ec-82c9-c5624d4a5464": "Pickup Number",
+        "751c32a9-5846-11ec-82c9-c5624d4a5464": "Appointment Comment Text",
+        "751c32aa-5846-11ec-82c9-c5624d4a5464": "Appointment Creation Date Time",
+        "751c32ab-5846-11ec-82c9-c5624d4a5464": "Appointment Creation User Identifier",
+        "751c32ac-5846-11ec-82c9-c5624d4a5464": "Appointment Update Date Time",
+        "751c32ad-5846-11ec-82c9-c5624d4a5464": "Appointment Update User Identifier",
+        "751c32ae-5846-11ec-82c9-c5624d4a5464": "nodeTransportHolder",
+        "751c32af-5846-11ec-82c9-c5624d4a5464": "Node Outbound Shipments",
+        "751c32b0-5846-11ec-82c9-c5624d4a5464": "Node Inbound Deliveries",
+        "751c0b90-5846-11ec-82c9-c5624d4a5464": "Node Appointment",
+        "7599ee20-5846-11ec-82c9-c5624d4a5464": "Transport Holder Number",
+        "7599ee21-5846-11ec-82c9-c5624d4a5464": "Transport Holder Type Code",
+        "7599ee22-5846-11ec-82c9-c5624d4a5464": "Trailer Licenseplate Number",
+        "7599ee23-5846-11ec-82c9-c5624d4a5464": "Visit Type Code",
+        "7599ee24-5846-11ec-82c9-c5624d4a5464": "Carrier Code",
+        "7599ee25-5846-11ec-82c9-c5624d4a5464": "Location Reference Type Code",
+        "7599ee26-5846-11ec-82c9-c5624d4a5464": "Location Reference Code",
+        "7599ee27-5846-11ec-82c9-c5624d4a5464": "Check In Timestamp",
+        "7599ee28-5846-11ec-82c9-c5624d4a5464": "Check in Agent User Identifier",
+        "7599ee29-5846-11ec-82c9-c5624d4a5464": "Check Out Timestamp",
+        "7599ee2a-5846-11ec-82c9-c5624d4a5464": "Check Out Agent User Identifier",
+        "7599ee2b-5846-11ec-82c9-c5624d4a5464": "Transport Holder Type Size Code",
+        "7599ee2c-5846-11ec-82c9-c5624d4a5464": "Load Status Code",
+        "7599ee2d-5846-11ec-82c9-c5624d4a5464": "Seal Number",
+        "7599ee2e-5846-11ec-82c9-c5624d4a5464": "Loaded Percent",
+        "7599ee2f-5846-11ec-82c9-c5624d4a5464": "Pro Number",
+        "7599c710-5846-11ec-82c9-c5624d4a5464": "Node Transport Holder",
+        "75fde010-5846-11ec-82c9-c5624d4a5464": "Event Name",
+        "75fde011-5846-11ec-82c9-c5624d4a5464": "Event Type Code",
+        "75fde012-5846-11ec-82c9-c5624d4a5464": "Event TimeZone Code",
+        "75fde013-5846-11ec-82c9-c5624d4a5464": "Event Identifier",
+        "75fde014-5846-11ec-82c9-c5624d4a5464": "Event Timestamp",
+        "75fde015-5846-11ec-82c9-c5624d4a5464": "Node Inbound Delivery Number",
+        "75fde016-5846-11ec-82c9-c5624d4a5464": "nodeInboundDelivery",
+        "75fdb900-5846-11ec-82c9-c5624d4a5464": "Node Inbound Delivery Event",
+        "768a1a82-5846-11ec-82c9-c5624d4a5464": "Event Name",
+        "768a1a83-5846-11ec-82c9-c5624d4a5464": "Event Type Code",
+        "768a1a84-5846-11ec-82c9-c5624d4a5464": "Event TimeZone Code",
+        "768a4190-5846-11ec-82c9-c5624d4a5464": "Event Identifier",
+        "768a4191-5846-11ec-82c9-c5624d4a5464": "Event Timestamp",
+        "768a4192-5846-11ec-82c9-c5624d4a5464": "Node Appointment Number",
+        "768a4193-5846-11ec-82c9-c5624d4a5464": "nodeAppointment",
+        "768a1a80-5846-11ec-82c9-c5624d4a5464": "Node Appointment Event",
+        "7748af91-5846-11ec-82c9-c5624d4a5464": "Event Name",
+        "7748af92-5846-11ec-82c9-c5624d4a5464": "Event Type Code",
+        "7748af93-5846-11ec-82c9-c5624d4a5464": "Event TimeZone Code",
+        "7748af94-5846-11ec-82c9-c5624d4a5464": "Event Identifier",
+        "7748af95-5846-11ec-82c9-c5624d4a5464": "Event Timestamp",
+        "7748af96-5846-11ec-82c9-c5624d4a5464": "Transport Holder Number",
+        "77486170-5846-11ec-82c9-c5624d4a5464": "Node Transport Holder Event",
+        "77ca62b1-5846-11ec-82c9-c5624d4a5464": "Inbound Delivery Number",
+        "77ca62b2-5846-11ec-82c9-c5624d4a5464": "Node Location Code",
+        "77ca62b3-5846-11ec-82c9-c5624d4a5464": "nodeInboundASNs",
+        "77ca3ba0-5846-11ec-82c9-c5624d4a5464": "Node Inbound Delivery",
+        "78204ae2-5846-11ec-82c9-c5624d4a5464": "Shipment Number",
+        "78204ae0-5846-11ec-82c9-c5624d4a5464": "Node Outbound Shipment",
+        "bc0916b0-5846-11ec-82c9-c5624d4a5464": "fk Node Appointment.Appointment Number to Node Appointment Event.Node Appointment Number",
+        "ca134be0-5846-11ec-82c9-c5624d4a5464": "fk Node Transport Holder.Transport Holder Number to Node Transport Holder Event.Transport Holder Number",
+        "d4afd190-5846-11ec-82c9-c5624d4a5464": "fk Node Inbound Delivery.Inbound Delivery Number to Node Inbound Delivery Event.Node Inbound Delivery Number"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "7c37e0e0-5844-11ec-82c9-c5624d4a5464"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "7c37e0e2-5844-11ec-82c9-c5624d4a5464"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "7c37e0e1-5844-11ec-82c9-c5624d4a5464"
+    },
+    "sources": [],
+    "decorativeSymbols": [
+        {
+            "GUID": "32670f60-5847-11ec-82c9-c5624d4a5464",
+            "name": "Node Processing",
+            "type": "annotation",
+            "disableInitialFocus": true,
+            "value": "Title: Node Processing LDM\n\nAuthor: bruno.thijs@nike.com\n\nDate: 8-Dec-2021\n\nVersion: 2.1.0",
+            "bucketId": "84031e20-5844-11ec-82c9-c5624d4a5464"
+        }
+    ],
+    "dbVersion": "3.x",
+    "dbVendor": "Hive",
+    "appTarget": "HIVE",
+    "creationTS": "2021-12-08T16:32:50.669Z",
+    "GUID": "7c37b9d0-5844-11ec-82c9-c5624d4a5464",
+    "isLineageEnabled": false,
+    "lastModifTS": "2021-12-14T16:33:36.249Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "Hive",
+        "pluginVersion": "0.1.63",
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.2.9"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "74b819a0-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1113.5050651230101,
+                        "y": 1230.2286541244573,
+                        "width": 368,
+                        "height": 47,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "751c0b90-5846-11ec-82c9-c5624d4a5464",
+                        "x": 654.5759768451519,
+                        "y": 941.6454413892911,
+                        "width": 369,
+                        "height": 371,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "7599c710-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1622.4659913169314,
+                        "y": 930.7612156295222,
+                        "width": 342,
+                        "height": 317,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "75fdb900-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1115.0188133140377,
+                        "y": 656.3603473227204,
+                        "width": 361,
+                        "height": 155,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "768a1a80-5846-11ec-82c9-c5624d4a5464",
+                        "x": 671.2069464544134,
+                        "y": 651.7916063675831,
+                        "width": 339,
+                        "height": 155,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "77486170-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1642.341534008682,
+                        "y": 664.5513748191026,
+                        "width": 304,
+                        "height": 137,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "77ca3ba0-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1142,
+                        "y": 1006,
+                        "width": 307,
+                        "height": 101,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "78204ae0-5846-11ec-82c9-c5624d4a5464",
+                        "x": 1666.613603473226,
+                        "y": 1332.6266280752536,
+                        "width": 271,
+                        "height": 47,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 320.5759768451519,
+                        "y": 611.7916063675831,
+                        "GUID": "84031e20-5844-11ec-82c9-c5624d4a5464"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [
+                    {
+                        "GUID": "32670f60-5847-11ec-82c9-c5624d4a5464",
+                        "x": 360.5759768451519,
+                        "y": 651.7916063675831,
+                        "height": 187,
+                        "width": 259,
+                        "color": {
+                            "hsl": {
+                                "h": 3.789473684210526,
+                                "s": 0.904761904761905,
+                                "l": 0.5882352941176471,
+                                "a": 1
+                            },
+                            "hex": "#f54337",
+                            "rgb": {
+                                "r": 245,
+                                "g": 67,
+                                "b": 55,
+                                "a": 1
+                            },
+                            "hsv": {
+                                "h": 3.789473684210526,
+                                "s": 0.7755102040816326,
+                                "v": 0.9607843137254902,
+                                "a": 1
+                            },
+                            "oldHue": 3.789473684210526,
+                            "source": "hex"
+                        }
+                    }
+                ],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

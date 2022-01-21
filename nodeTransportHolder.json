@@ -1,0 +1,138 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "title": "Node Transport Holder",
+    "properties": {
+        "transportHolderNumber": {
+            "type": "string",
+            "title": "Transport Holder Number",
+            "description": "This is an identifier of the physical trailer used for the shipment/appointment ",
+            "isActivated": true,
+            "mode": "string",
+            "example": "KS16417"
+        },
+        "transportHolderTypeCode": {
+            "type": "string",
+            "title": "Transport Holder Type Code",
+            "description": "This describes the general type of transport holder.  Typical types are Trailer, Container.",
+            "isActivated": true,
+            "mode": "string",
+            "example": "TRAILER"
+        },
+        "trailerLicenseplateNumber": {
+            "type": "string",
+            "title": "Trailer Licenseplate Number",
+            "description": "This is the licenseplate number of the trailer",
+            "isActivated": true,
+            "mode": "string",
+            "example": "1-AAA-123"
+        },
+        "visitTypeCode": {
+            "type": "string",
+            "title": "Visit Type Code",
+            "description": "This field identified the purpose of the trailer. Possible values are :\n- Live Unload -The trailer is unloaded but the tractor is still attached.\n- Drop Unload - The loaded trailer is dropped in the yard. The loaded trailer \n will be moved to the correct dock for unloading at a later point in time.\n- Live Load - The trailer is loaded but the tractor is still attached.\n- Pickup Load - An empty trailer was loaded at the dock. The driver arrives at a later point in time to pick up the loaded trailer.\n- Pickup Empty - The driver has come to pick up an empty trailer.\n- Drop Empty - The driver has come to drop off an empty trailer. ",
+            "isActivated": true,
+            "mode": "string",
+            "example": "LIVE_UNLOAD"
+        },
+        "carrierCode": {
+            "type": "string",
+            "title": "Carrier Code",
+            "description": "This specifies the carrier for whitch the trailer holds the goods",
+            "isActivated": true,
+            "mode": "string",
+            "example": "UPSN"
+        },
+        "locationReferenceTypeCode": {
+            "type": "string",
+            "title": "Location Reference Type Code",
+            "description": "Yard Slot or Dock Door",
+            "isActivated": true,
+            "mode": "string",
+            "example": "Yard Slot"
+        },
+        "locationReferenceCode": {
+            "type": "string",
+            "title": "Location Reference Code",
+            "description": "This is the location where the trailer is currently at (Yard slot or dock door)",
+            "isActivated": true,
+            "mode": "string",
+            "example": "4352"
+        },
+        "checkInTimestamp": {
+            "type": "string",
+            "title": "Check In Timestamp",
+            "description": "This is the time the trailer was checked in on the yard",
+            "isActivated": true,
+            "mode": "string",
+            "format": "date-time",
+            "example": "2021-09-08T22:00:00"
+        },
+        "checkInAgentUserIdentifier": {
+            "type": "string",
+            "title": "Check in Agent User Identifier",
+            "description": "This is the person that did the check-in.",
+            "isActivated": true,
+            "mode": "string",
+            "example": "bthijs"
+        },
+        "checkOutTimestamp": {
+            "type": "string",
+            "title": "Check Out Timestamp",
+            "description": "This is the time the trailer was checked out from the yard",
+            "isActivated": true,
+            "mode": "string",
+            "format": "date-time",
+            "example": "2021-09-08T22:00:00"
+        },
+        "checkOutAgentUserIdentifier": {
+            "type": "string",
+            "title": "Check Out Agent User Identifier",
+            "description": "This is the person that did the check-out.",
+            "isActivated": true,
+            "mode": "string",
+            "example": "bthijs"
+        },
+        "transportHolderTypeSizeCode": {
+            "type": "string",
+            "title": "Transport Holder Type Size Code",
+            "description": "This field represent the equipment type value used in Manhattan. This indicated the size of the trailer.",
+            "isActivated": true,
+            "mode": "string",
+            "example": "Trailer (57cube)"
+        },
+        "loadStatusCode": {
+            "type": "string",
+            "title": "Load Status Code",
+            "description": "This field indicates if the trailer is fully or partially loaded \n- Loaded - Trailer is fully loaded\n- Loading - Trailer is partially loaded",
+            "isActivated": true,
+            "mode": "string",
+            "example": "Loaded"
+        },
+        "sealNumber": {
+            "type": "string",
+            "title": "Seal Number",
+            "description": "This field contains the seal number of the trailer",
+            "isActivated": true,
+            "mode": "string",
+            "example": "123456789"
+        },
+        "loadedPercent": {
+            "type": "string",
+            "title": "Loaded Percent",
+            "description": "This field indicates the percentage of the trailer that is loaded",
+            "isActivated": true,
+            "mode": "string",
+            "example": "85"
+        },
+        "proNumber": {
+            "type": "string",
+            "title": "Pro Number",
+            "description": "Carrier Manifest Number ( used as CMR in EMEA )",
+            "isActivated": true,
+            "mode": "string",
+            "example": "1456789"
+        }
+    },
+    "isActivated": true
+}

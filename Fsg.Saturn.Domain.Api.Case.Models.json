@@ -1,0 +1,982 @@
+{
+    "modelName": "Fsg.Saturn.Domain.Api.Case.Models",
+    "collections": [
+        {
+            "collectionName": "caseDocument",
+            "type": "object",
+            "properties": [
+                {
+                    "GUID": "b58f20d0-45eb-11ec-815c-f5b893e83f3b",
+                    "name": "case",
+                    "type": "reference",
+                    "$ref": "#model/definitions/case",
+                    "refType": "model",
+                    "ref": "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "refIdPath": [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b"
+                    ],
+                    "isActivated": true,
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "75c04a10-45eb-11ec-815c-f5b893e83f3b"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "75bf1190-45eb-11ec-815c-f5b893e83f3b",
+            "bucketId": "70fa3680-45eb-11ec-815c-f5b893e83f3b"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "caseDomain",
+            "type": "bucket",
+            "collectionIds": [
+                "75bf1190-45eb-11ec-815c-f5b893e83f3b"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "70fa3680-45eb-11ec-815c-f5b893e83f3b"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "70fa3680-45eb-11ec-815c-f5b893e83f3b": "caseDomain",
+        "75bf1190-45eb-11ec-815c-f5b893e83f3b": "caseDocument",
+        "a302bee0-45eb-11ec-815c-f5b893e83f3b": "case",
+        "a3035b20-45eb-11ec-815c-f5b893e83f3b": "case",
+        "b58f20d0-45eb-11ec-815c-f5b893e83f3b": "case",
+        "cf720530-45eb-11ec-815c-f5b893e83f3b": "selectedListItem",
+        "cf725350-45eb-11ec-815c-f5b893e83f3b": "selectedListItem",
+        "f7aa5890-45eb-11ec-815c-f5b893e83f3b": "status",
+        "0a257c70-45ec-11ec-815c-f5b893e83f3b": "status",
+        "a9625e3d-45eb-11ec-815c-f5b893e83f3b": "userRef",
+        "473cd450-45ec-11ec-815c-f5b893e83f3b": "client",
+        "54cf4170-45ec-11ec-815c-f5b893e83f3b": "interestedParty",
+        "63689740-45ec-11ec-815c-f5b893e83f3b": "id",
+        "a9625e45-45eb-11ec-815c-f5b893e83f3b": "clientRef",
+        "a9625e49-45eb-11ec-815c-f5b893e83f3b": "interestedPartyRef",
+        "259596d0-5f22-11ec-bf9c-fdec33e860a9": "selectedTerm",
+        "2595e4f0-5f22-11ec-bf9c-fdec33e860a9": "selectedTerm",
+        "2a320250-5f22-11ec-bf9c-fdec33e860a9": "type",
+        "a9625e3b-45eb-11ec-815c-f5b893e83f3b": "dateTime",
+        "a9625e32-45eb-11ec-815c-f5b893e83f3b": "lastUpdatedDateTime",
+        "a9625e35-45eb-11ec-815c-f5b893e83f3b": "dateTime",
+        "17507530-45ec-11ec-815c-f5b893e83f3b": "user",
+        "e88fce50-5f25-11ec-bf9c-fdec33e860a9": "closeReasonType"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [
+            {
+                "name": "case",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9623720-45eb-11ec-815c-f5b893e83f3b",
+                        "format": "uuid",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "reference",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9623721-45eb-11ec-815c-f5b893e83f3b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "The internal reference for the case",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "header",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "document",
+                        "properties": [
+                            {
+                                "GUID": "2a320250-5f22-11ec-bf9c-fdec33e860a9",
+                                "name": "type",
+                                "type": "reference",
+                                "$ref": "#model/definitions/selectedTerm",
+                                "refType": "model",
+                                "ref": "2595e4f0-5f22-11ec-bf9c-fdec33e860a9",
+                                "refIdPath": [
+                                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                    "2595e4f0-5f22-11ec-bf9c-fdec33e860a9"
+                                ],
+                                "required": true,
+                                "isActivated": true,
+                                "hackoladeMeta": {
+                                    "namingConvention": ""
+                                },
+                                "error": {
+                                    "required": false
+                                }
+                            },
+                            {
+                                "name": "createdDate",
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "string",
+                                "GUID": "a9625e31-45eb-11ec-815c-f5b893e83f3b",
+                                "required": true,
+                                "format": "date",
+                                "description": "The date of which the case was created",
+                                "properties": []
+                            },
+                            {
+                                "name": "lastUpdatedDateTime",
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "string",
+                                "GUID": "a9625e32-45eb-11ec-815c-f5b893e83f3b",
+                                "required": true,
+                                "format": "date-time",
+                                "description": "The date and time the case was last updated ",
+                                "properties": []
+                            },
+                            {
+                                "name": "currentStatus",
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "document",
+                                "properties": [
+                                    {
+                                        "GUID": "f7aa5890-45eb-11ec-815c-f5b893e83f3b",
+                                        "name": "status",
+                                        "type": "reference",
+                                        "$ref": "#model/definitions/selectedListItem",
+                                        "refType": "model",
+                                        "ref": "cf725350-45eb-11ec-815c-f5b893e83f3b",
+                                        "refIdPath": [
+                                            "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                            "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                            "cf725350-45eb-11ec-815c-f5b893e83f3b"
+                                        ],
+                                        "isActivated": true,
+                                        "hackoladeMeta": {},
+                                        "error": {
+                                            "required": false
+                                        },
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "dateTime",
+                                        "hackoladeMeta": {},
+                                        "isActivated": true,
+                                        "type": "string",
+                                        "GUID": "a9625e35-45eb-11ec-815c-f5b893e83f3b",
+                                        "format": "date-time",
+                                        "foreignCollection": "",
+                                        "foreignField": [],
+                                        "properties": [],
+                                        "required": true,
+                                        "error": {}
+                                    }
+                                ],
+                                "GUID": "a9625e33-45eb-11ec-815c-f5b893e83f3b",
+                                "required": true,
+                                "additionalProperties": true,
+                                "description": "The current status of the case"
+                            },
+                            {
+                                "name": "statusHistory",
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "array",
+                                "properties": [
+                                    {
+                                        "hackoladeMeta": {},
+                                        "isActivated": true,
+                                        "type": "document",
+                                        "properties": [
+                                            {
+                                                "GUID": "0a257c70-45ec-11ec-815c-f5b893e83f3b",
+                                                "name": "status",
+                                                "type": "reference",
+                                                "$ref": "#model/definitions/selectedListItem",
+                                                "refType": "model",
+                                                "ref": "cf725350-45eb-11ec-815c-f5b893e83f3b",
+                                                "refIdPath": [
+                                                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                                    "cf725350-45eb-11ec-815c-f5b893e83f3b"
+                                                ],
+                                                "isActivated": true,
+                                                "hackoladeMeta": {},
+                                                "error": {
+                                                    "required": false
+                                                },
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "dateTime",
+                                                "hackoladeMeta": {},
+                                                "isActivated": true,
+                                                "type": "string",
+                                                "GUID": "a9625e3b-45eb-11ec-815c-f5b893e83f3b",
+                                                "foreignCollection": "",
+                                                "foreignField": [],
+                                                "format": "date-time",
+                                                "description": "the date the status changed",
+                                                "properties": [],
+                                                "required": true,
+                                                "error": {}
+                                            },
+                                            {
+                                                "GUID": "17507530-45ec-11ec-815c-f5b893e83f3b",
+                                                "name": "user",
+                                                "type": "reference",
+                                                "$ref": "#model/definitions/user",
+                                                "refType": "model",
+                                                "ref": "a9625e3d-45eb-11ec-815c-f5b893e83f3b",
+                                                "refIdPath": [
+                                                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                                    "a9625e3d-45eb-11ec-815c-f5b893e83f3b"
+                                                ],
+                                                "isActivated": true,
+                                                "hackoladeMeta": {},
+                                                "required": true,
+                                                "error": {
+                                                    "required": false
+                                                }
+                                            },
+                                            {
+                                                "name": "reason",
+                                                "hackoladeMeta": {},
+                                                "isActivated": true,
+                                                "type": "string",
+                                                "GUID": "a9625e3a-45eb-11ec-815c-f5b893e83f3b",
+                                                "description": "The reason the status changed",
+                                                "properties": []
+                                            }
+                                        ],
+                                        "GUID": "a9625e38-45eb-11ec-815c-f5b893e83f3b",
+                                        "arrayItem": true,
+                                        "arrayParentType": "array",
+                                        "displayName": "statusHistoryItem",
+                                        "description": "A historical case status record which includes the type of status it was set to, by whom and the reason for the change",
+                                        "additionalProperties": true
+                                    }
+                                ],
+                                "additionalItems": true,
+                                "GUID": "a9625e37-45eb-11ec-815c-f5b893e83f3b",
+                                "description": "the history of status changes ",
+                                "foreignCollection": "",
+                                "foreignField": [],
+                                "required": true,
+                                "minItems": 1
+                            },
+                            {
+                                "GUID": "e88fce50-5f25-11ec-bf9c-fdec33e860a9",
+                                "name": "closeReasonType",
+                                "type": "reference",
+                                "$ref": "#model/definitions/selectedTerm",
+                                "refType": "model",
+                                "ref": "2595e4f0-5f22-11ec-bf9c-fdec33e860a9",
+                                "refIdPath": [
+                                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                    "2595e4f0-5f22-11ec-bf9c-fdec33e860a9"
+                                ],
+                                "isActivated": true,
+                                "hackoladeMeta": {},
+                                "error": {}
+                            },
+                            {
+                                "name": "closeReasonDetail",
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "string",
+                                "GUID": "a9625e41-45eb-11ec-815c-f5b893e83f3b",
+                                "description": "Additional details on the reason why the case was closed",
+                                "properties": []
+                            }
+                        ],
+                        "GUID": "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "definitionRefs": [],
+                        "additionalProperties": true,
+                        "required": true
+                    },
+                    {
+                        "name": "summary",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9625e42-45eb-11ec-815c-f5b893e83f3b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "A summary of the case that will be displayed in summary tables",
+                        "properties": [],
+                        "required": true
+                    },
+                    {
+                        "name": "clientRelationships",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "array",
+                        "properties": [
+                            {
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "document",
+                                "properties": [
+                                    {
+                                        "GUID": "473cd450-45ec-11ec-815c-f5b893e83f3b",
+                                        "name": "client",
+                                        "type": "reference",
+                                        "$ref": "#model/definitions/client",
+                                        "refType": "model",
+                                        "ref": "a9625e45-45eb-11ec-815c-f5b893e83f3b",
+                                        "refIdPath": [
+                                            "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                            "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                            "a9625e45-45eb-11ec-815c-f5b893e83f3b"
+                                        ],
+                                        "isActivated": true,
+                                        "hackoladeMeta": {},
+                                        "required": true,
+                                        "error": {
+                                            "required": false
+                                        }
+                                    }
+                                ],
+                                "GUID": "a9625e44-45eb-11ec-815c-f5b893e83f3b",
+                                "arrayItem": true,
+                                "arrayParentType": "array",
+                                "displayName": "clientRelationship",
+                                "additionalProperties": true,
+                                "description": "A client that is related to the case"
+                            }
+                        ],
+                        "additionalItems": true,
+                        "GUID": "a9625e43-45eb-11ec-815c-f5b893e83f3b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "the clients that are related to the case",
+                        "required": true,
+                        "minItems": 1
+                    },
+                    {
+                        "name": "interestedPartyRelationships",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "array",
+                        "properties": [
+                            {
+                                "hackoladeMeta": {},
+                                "isActivated": true,
+                                "type": "document",
+                                "properties": [
+                                    {
+                                        "GUID": "54cf4170-45ec-11ec-815c-f5b893e83f3b",
+                                        "name": "interestedParty",
+                                        "type": "reference",
+                                        "$ref": "#model/definitions/interestedParty",
+                                        "refType": "model",
+                                        "ref": "a9625e49-45eb-11ec-815c-f5b893e83f3b",
+                                        "refIdPath": [
+                                            "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                                            "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                                            "a9625e49-45eb-11ec-815c-f5b893e83f3b"
+                                        ],
+                                        "isActivated": true,
+                                        "hackoladeMeta": {},
+                                        "required": true,
+                                        "error": {
+                                            "required": false
+                                        }
+                                    }
+                                ],
+                                "GUID": "a9625e48-45eb-11ec-815c-f5b893e83f3b",
+                                "arrayItem": true,
+                                "arrayParentType": "array",
+                                "displayName": "interestedPartyRelationship",
+                                "additionalProperties": true,
+                                "description": "A relationship to an interested party."
+                            }
+                        ],
+                        "additionalItems": true,
+                        "GUID": "a9625e47-45eb-11ec-815c-f5b893e83f3b",
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "description": "A collection of relationships to interested parties. ",
+                        "minItems": 1
+                    }
+                ],
+                "additionalProperties": false,
+                "error": {
+                    "name": false,
+                    "code": false
+                },
+                "GUID": "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                "parentRelationship": "",
+                "childRelationships": [],
+                "definitionRefs": [
+                    [
+                        "75bf1190-45eb-11ec-815c-f5b893e83f3b",
+                        "b58f20d0-45eb-11ec-815c-f5b893e83f3b"
+                    ]
+                ]
+            },
+            {
+                "name": "clientRef",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9625e46-45eb-11ec-815c-f5b893e83f3b",
+                        "format": "uuid",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "name",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "73973310-45ec-11ec-815c-f5b893e83f3b",
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    }
+                ],
+                "additionalProperties": false,
+                "GUID": "a9625e45-45eb-11ec-815c-f5b893e83f3b",
+                "description": "The related client",
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e43-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e44-45eb-11ec-815c-f5b893e83f3b",
+                        "473cd450-45ec-11ec-815c-f5b893e83f3b"
+                    ]
+                ],
+                "entityReference_checkboxProp": true,
+                "error": {}
+            },
+            {
+                "name": "interestedPartyRef",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9625e4a-45eb-11ec-815c-f5b893e83f3b",
+                        "description": "The related interested party id",
+                        "format": "uuid",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "name",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "9c8987a0-45ec-11ec-815c-f5b893e83f3b",
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    }
+                ],
+                "additionalProperties": false,
+                "GUID": "a9625e49-45eb-11ec-815c-f5b893e83f3b",
+                "description": "The related interested party",
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e47-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e48-45eb-11ec-815c-f5b893e83f3b",
+                        "54cf4170-45ec-11ec-815c-f5b893e83f3b"
+                    ]
+                ],
+                "entityReference_checkboxProp": true,
+                "error": {}
+            },
+            {
+                "GUID": "cf725350-45eb-11ec-815c-f5b893e83f3b",
+                "name": "selectedListItem",
+                "type": "reference",
+                "$ref": "#external/definitions/selectedListItem",
+                "refType": "external",
+                "ref": "cf720530-45eb-11ec-815c-f5b893e83f3b",
+                "refIdPath": [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c42-45ea-11ec-815c-f5b893e83f3b",
+                    "cf720530-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                "isActivated": true,
+                "error": {
+                    "name": false,
+                    "code": false,
+                    "refPath": false
+                },
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e33-45eb-11ec-815c-f5b893e83f3b",
+                        "f7aa5890-45eb-11ec-815c-f5b893e83f3b"
+                    ],
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e37-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e38-45eb-11ec-815c-f5b893e83f3b",
+                        "0a257c70-45ec-11ec-815c-f5b893e83f3b"
+                    ]
+                ]
+            },
+            {
+                "GUID": "2595e4f0-5f22-11ec-bf9c-fdec33e860a9",
+                "name": "selectedTerm",
+                "type": "reference",
+                "$ref": "#external/definitions/selectedTerm",
+                "refType": "external",
+                "ref": "259596d0-5f22-11ec-bf9c-fdec33e860a9",
+                "refIdPath": [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c42-45ea-11ec-815c-f5b893e83f3b",
+                    "259596d0-5f22-11ec-bf9c-fdec33e860a9"
+                ],
+                "isActivated": true,
+                "error": {
+                    "name": false,
+                    "code": false,
+                    "refPath": false
+                },
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "2a320250-5f22-11ec-bf9c-fdec33e860a9"
+                    ],
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "e88fce50-5f25-11ec-bf9c-fdec33e860a9"
+                    ]
+                ],
+                "hackoladeMeta": {}
+            },
+            {
+                "name": "userRef",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "63689740-45ec-11ec-815c-f5b893e83f3b",
+                        "format": "uuid",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "name",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "a9625e3e-45eb-11ec-815c-f5b893e83f3b",
+                        "description": "Name of the user ",
+                        "properties": []
+                    }
+                ],
+                "GUID": "a9625e3d-45eb-11ec-815c-f5b893e83f3b",
+                "additionalProperties": true,
+                "description": "the user whom changed the case status",
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                        "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e37-45eb-11ec-815c-f5b893e83f3b",
+                        "a9625e38-45eb-11ec-815c-f5b893e83f3b",
+                        "17507530-45ec-11ec-815c-f5b893e83f3b"
+                    ]
+                ],
+                "entityReference_checkboxProp": true,
+                "error": {}
+            }
+        ],
+        "GUID": "ee880c41-45ea-11ec-815c-f5b893e83f3b"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "ee880c43-45ea-11ec-815c-f5b893e83f3b"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [
+            {
+                "name": "selectedListItem",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "70e627d0-4091-11ec-aea4-d7f4db7b3019",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "text",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "77b92260-4091-11ec-aea4-d7f4db7b3019",
+                        "required": true,
+                        "properties": []
+                    },
+                    {
+                        "name": "data",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "7c6e4600-4091-11ec-aea4-d7f4db7b3019",
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    },
+                    {
+                        "name": "other",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "80576710-4091-11ec-aea4-d7f4db7b3019",
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    }
+                ],
+                "additionalProperties": false,
+                "GUID": "cf720530-45eb-11ec-815c-f5b893e83f3b",
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "cf725350-45eb-11ec-815c-f5b893e83f3b"
+                    ]
+                ],
+                "error": {
+                    "name": false,
+                    "code": false
+                },
+                "link": "Fsg.Saturn.Models.json",
+                "fieldRelativePath": "#/definitions/properties/selectedListItem",
+                "kind": "relativePath",
+                "fileType": "hackoladeSchema"
+            },
+            {
+                "name": "selectedTerm",
+                "hackoladeMeta": {},
+                "isActivated": true,
+                "type": "document",
+                "properties": [
+                    {
+                        "name": "id",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "034e3d40-46ca-11ec-9e89-cd1483041890",
+                        "format": "uuid",
+                        "required": true,
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    },
+                    {
+                        "name": "path",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "259f55a0-46ca-11ec-9e89-cd1483041890",
+                        "required": true,
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "properties": []
+                    },
+                    {
+                        "name": "name",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "035c1ff0-46ca-11ec-9e89-cd1483041890",
+                        "required": false,
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "properties": []
+                    },
+                    {
+                        "name": "date",
+                        "hackoladeMeta": {},
+                        "isActivated": true,
+                        "type": "string",
+                        "GUID": "e64df900-46d9-11ec-9e89-cd1483041890",
+                        "format": "date",
+                        "error": {
+                            "name": false,
+                            "code": false
+                        },
+                        "foreignCollection": "",
+                        "foreignField": [],
+                        "properties": []
+                    }
+                ],
+                "additionalProperties": false,
+                "GUID": "259596d0-5f22-11ec-bf9c-fdec33e860a9",
+                "definitionRefs": [
+                    [
+                        "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                        "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                        "2595e4f0-5f22-11ec-bf9c-fdec33e860a9"
+                    ]
+                ],
+                "error": {
+                    "name": false,
+                    "code": false
+                },
+                "link": "Fsg.Saturn.Models.json",
+                "fieldRelativePath": "#/definitions/properties/selectedTerm",
+                "kind": "relativePath",
+                "fileType": "hackoladeSchema"
+            }
+        ],
+        "GUID": "ee880c42-45ea-11ec-815c-f5b893e83f3b"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVendor": "JSON",
+    "dbVersion": "2019-09",
+    "appTarget": "JSON",
+    "creationTS": "2021-11-15T08:06:26.820Z",
+    "GUID": "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        },
+        "customPropertiesUpdated": true
+    },
+    "version": "0.0.1",
+    "lastModifTS": "2022-01-06T12:40:47.018Z",
+    "persistenceSchemaVersion": "5",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "5.3.2"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "75bf1190-45eb-11ec-815c-f5b893e83f3b",
+                        "x": 80,
+                        "y": 80,
+                        "width": 425,
+                        "height": 879,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 40,
+                        "y": 40,
+                        "GUID": "70fa3680-45eb-11ec-815c-f5b893e83f3b"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "cf725350-45eb-11ec-815c-f5b893e83f3b",
+                    "cf720530-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a9625e3d-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "2595e4f0-5f22-11ec-bf9c-fdec33e860a9",
+                    "259596d0-5f22-11ec-bf9c-fdec33e860a9"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e47-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e33-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "2a320250-5f22-11ec-bf9c-fdec33e860a9",
+                    "2595e4f0-5f22-11ec-bf9c-fdec33e860a9"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "2a320250-5f22-11ec-bf9c-fdec33e860a9",
+                    "2595e4f0-5f22-11ec-bf9c-fdec33e860a9"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e33-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e37-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e38-45eb-11ec-815c-f5b893e83f3b",
+                    "0a257c70-45ec-11ec-815c-f5b893e83f3b",
+                    "cf725350-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e37-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e38-45eb-11ec-815c-f5b893e83f3b",
+                    "17507530-45ec-11ec-815c-f5b893e83f3b",
+                    "a9625e3d-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9623722-45eb-11ec-815c-f5b893e83f3b"
+                ],
+                [
+                    "ee880c40-45ea-11ec-815c-f5b893e83f3b",
+                    "ee880c41-45ea-11ec-815c-f5b893e83f3b",
+                    "a3035b20-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e43-45eb-11ec-815c-f5b893e83f3b",
+                    "a9625e44-45eb-11ec-815c-f5b893e83f3b"
+                ]
+            ],
+            "shouldDistributeCollections": false
+        }
+    }
+}
