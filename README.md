@@ -7,3 +7,4 @@ Test repository with all sample models from hackolade.com and more.
 - test of workgroup edition
 - update documentation
 - update documentation again
+- update documentation again
