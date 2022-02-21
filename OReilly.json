@@ -477,7 +477,7 @@
                 }
             ],
             "bucketId": "c5a43390-a231-11e8-a82b-ab38db90b078",
-            "comments": "Q2. Find information about a hotel",
+            "comments": "Q2. Find information about a given hotel",
             "collation": {},
             "tableOptions": {
                 "bloomFilterFalsePositiveChance": 0.01,
