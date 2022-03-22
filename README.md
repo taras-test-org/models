@@ -1,6 +1,6 @@
 # workgroup-git-test-models
 
-Test repository with all sample models from hackolade.com and more.
+Test repository with all sample models from https://hackolade.com/samplemodels.html and more.
 
 ## Main purpose
 
