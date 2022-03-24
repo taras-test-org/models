@@ -499,7 +499,7 @@
                     ]
                 },
                 {
-                    "name": "Name",
+                    "name": "NameProduct",
                     "code": "",
                     "isActivated": true,
                     "$ref": "#model/definitions/Name",
@@ -513,7 +513,9 @@
                     "GUID": "61c25382-4b8d-11ec-ae71-d5c74b0d4990",
                     "type": "reference",
                     "hackoladeMeta": {},
-                    "error": {}
+                    "error": {
+                        "name": false
+                    }
                 },
                 {
                     "primaryKey": false,
@@ -743,8 +745,12 @@
                     "GUID": "61c33de1-4b8d-11ec-ae71-d5c74b0d4990",
                     "error": {},
                     "childRelationships": [
+                        "bbe36030-03d9-11ec-b847-e1184f4ea812",
                         "bbddbae0-03d9-11ec-b847-e1184f4ea812"
-                    ]
+                    ],
+                    "parentRelationship": "",
+                    "foreignCollection": "",
+                    "foreignField": []
                 },
                 {
                     "exclusiveMinimum": false,
@@ -755,15 +761,17 @@
                     "name": "ParentProductCategoryID",
                     "isActivated": true,
                     "required": true,
-                    "foreignCollection": "9936b310-6a9d-11ea-a5ff-a16524f9bb05",
+                    "foreignCollection": "bb845040-03d9-11ec-b847-e1184f4ea812",
                     "foreignField": [
-                        "9936b310-6a9d-11ea-a5ff-a16524f9bb05",
-                        "992f6014-6a9d-11ea-a5ff-a16524f9bb05"
+                        "bb845040-03d9-11ec-b847-e1184f4ea812",
+                        "61c33de1-4b8d-11ec-ae71-d5c74b0d4990"
                     ],
                     "relationshipType": "Foreign Key",
                     "sample": null,
                     "GUID": "61c33de2-4b8d-11ec-ae71-d5c74b0d4990",
-                    "error": {}
+                    "error": {},
+                    "childRelationships": [],
+                    "parentRelationship": "bbe36030-03d9-11ec-b847-e1184f4ea812"
                 },
                 {
                     "name": "Name",
@@ -911,9 +919,12 @@
                     "GUID": "61c4c481-4b8d-11ec-ae71-d5c74b0d4990",
                     "error": {},
                     "childRelationships": [
-                        "bbc6fe90-03d9-11ec-b847-e1184f4ea812",
-                        "bbccf200-03d9-11ec-b847-e1184f4ea812"
-                    ]
+                        "bbccf200-03d9-11ec-b847-e1184f4ea812",
+                        "bbc6fe90-03d9-11ec-b847-e1184f4ea812"
+                    ],
+                    "parentRelationship": "",
+                    "foreignCollection": "",
+                    "foreignField": []
                 },
                 {
                     "name": "Name",
@@ -2565,7 +2576,7 @@
         "61c030a3-4b8d-11ec-ae71-d5c74b0d4990": "rowguid",
         "61c030a4-4b8d-11ec-ae71-d5c74b0d4990": "ModifiedDate",
         "61c25381-4b8d-11ec-ae71-d5c74b0d4990": "ProductID",
-        "61c25382-4b8d-11ec-ae71-d5c74b0d4990": "Name",
+        "61c25382-4b8d-11ec-ae71-d5c74b0d4990": "NameProduct",
         "61c25383-4b8d-11ec-ae71-d5c74b0d4990": "ProductNumber",
         "61c25384-4b8d-11ec-ae71-d5c74b0d4990": "Color",
         "61c25385-4b8d-11ec-ae71-d5c74b0d4990": "StandardCost",
@@ -2827,16 +2838,16 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2021-11-22T12:13:12.107Z",
+    "lastModifTS": "2022-03-24T10:03:03.594Z",
     "persistenceSchemaVersion": "5",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
-        "pluginVersion": "0.1.0",
+        "pluginVersion": "0.1.2",
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "5.2.11"
+        "version": "5.4.9"
     },
     "settings": {
         "centralPane": {
