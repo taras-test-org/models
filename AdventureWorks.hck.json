@@ -2838,7 +2838,7 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2022-03-24T10:03:03.594Z",
+    "lastModifTS": "2022-03-24T10:10:25.883Z",
     "persistenceSchemaVersion": "5",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -2879,8 +2879,8 @@
                     },
                     {
                         "GUID": "bb820650-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1178.133847240573,
-                        "y": 471.10369640293953,
+                        "x": 1047.2840817356714,
+                        "y": 467.5672162541585,
                         "width": 356,
                         "height": 339,
                         "color": {}
