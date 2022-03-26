@@ -12,7 +12,6 @@
                     "childRelationships": [
                         "8a3660f0-2b26-11e6-b7e5-591297143e36",
                         "fb857d40-2b26-11e6-b7e5-591297143e36",
-                        "75d151f0-2b27-11e6-b7e5-591297143e36",
                         "003231f0-91f7-11e9-a924-ddc9cd9b071f"
                     ],
                     "GUID": "0dd811fc-2b24-11e6-b7e5-591297143e36",
@@ -21,7 +20,10 @@
                     "required": true,
                     "name": "business_id",
                     "isActivated": true,
-                    "error": {}
+                    "error": {},
+                    "parentRelationship": "",
+                    "foreignCollection": "",
+                    "foreignField": []
                 },
                 {
                     "code": "",
@@ -171,7 +173,8 @@
                             "primaryKey": false,
                             "GUID": "0dd7ead6-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -308,7 +311,8 @@
                             "primaryKey": false,
                             "GUID": "0dd7eae8-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -418,7 +422,8 @@
                             "primaryKey": false,
                             "GUID": "0dd811e4-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -510,7 +515,8 @@
                             "primaryKey": false,
                             "GUID": "0dd811ef-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -580,7 +586,8 @@
                     "primaryKey": false,
                     "GUID": "0dd7ead2-2b24-11e6-b7e5-591297143e36",
                     "isActivated": true,
-                    "error": {}
+                    "error": {},
+                    "additionalProperties": true
                 },
                 {
                     "code": "",
@@ -632,7 +639,8 @@
                             "primaryKey": false,
                             "GUID": "0dd81202-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -661,7 +669,8 @@
                             "primaryKey": false,
                             "GUID": "0dd81205-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -690,7 +699,8 @@
                             "primaryKey": false,
                             "GUID": "0dd81208-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -719,7 +729,8 @@
                             "primaryKey": false,
                             "GUID": "0dd8120b-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -748,7 +759,8 @@
                             "primaryKey": false,
                             "GUID": "0dd8120e-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -777,7 +789,8 @@
                             "primaryKey": false,
                             "GUID": "0dd81211-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         },
                         {
                             "code": "",
@@ -806,14 +819,16 @@
                             "primaryKey": false,
                             "GUID": "0dd81214-2b24-11e6-b7e5-591297143e36",
                             "isActivated": true,
-                            "error": {}
+                            "error": {},
+                            "additionalProperties": true
                         }
                     ],
                     "name": "hours",
                     "primaryKey": false,
                     "GUID": "0dd81201-2b24-11e6-b7e5-591297143e36",
                     "isActivated": true,
-                    "error": {}
+                    "error": {},
+                    "additionalProperties": true
                 },
                 {
                     "code": "",
@@ -910,7 +925,9 @@
             "isActivated": true,
             "hackoladeMeta": {
                 "validationErrors": {}
-            }
+            },
+            "additionalProperties": true,
+            "indexes": []
         },
         {
             "code": "",
@@ -1032,7 +1049,8 @@
                     "primaryKey": false,
                     "GUID": "0da2aa09-2b24-11e6-b7e5-591297143e36",
                     "isActivated": true,
-                    "error": {}
+                    "error": {},
+                    "additionalProperties": true
                 }
             ],
             "type": "object",
@@ -1056,7 +1074,9 @@
             "isActivated": true,
             "hackoladeMeta": {
                 "validationErrors": {}
-            }
+            },
+            "additionalProperties": true,
+            "indexes": []
         },
         {
             "code": "",
@@ -1163,7 +1183,9 @@
             "isActivated": true,
             "hackoladeMeta": {
                 "validationErrors": {}
-            }
+            },
+            "additionalProperties": true,
+            "indexes": []
         },
         {
             "code": "",
@@ -1343,7 +1365,8 @@
                     "GUID": "0df0f113-2b24-11e6-b7e5-591297143e36",
                     "relationshipType": "",
                     "isActivated": false,
-                    "error": {}
+                    "error": {},
+                    "additionalProperties": true
                 },
                 {
                     "code": "",
@@ -1449,7 +1472,8 @@
                     "GUID": "0df0f127-2b24-11e6-b7e5-591297143e36",
                     "relationshipType": "",
                     "isActivated": true,
-                    "error": {}
+                    "error": {},
+                    "additionalProperties": true
                 },
                 {
                     "code": "",
@@ -1516,7 +1540,8 @@
                     "max": 180,
                     "bits": 26,
                     "storageEngineName": "WiredTiger",
-                    "collation": {}
+                    "collation": {},
+                    "isActivated": true
                 },
                 {
                     "GUID": "7c1fc9d0-74db-11eb-a254-db33a8dce2c4",
@@ -1539,13 +1564,15 @@
                     "language_override": "language",
                     "storageEngineName": "WiredTiger",
                     "collation": {},
-                    "partialFilterExpression": "{\"age\" : {\"$gte\" : 21 } }"
+                    "partialFilterExpression": "{\"age\" : {\"$gte\" : 21 } }",
+                    "isActivated": true
                 }
             ],
             "isActivated": true,
             "hackoladeMeta": {
                 "validationErrors": {}
-            }
+            },
+            "additionalProperties": true
         },
         {
             "code": "",
@@ -1650,14 +1677,16 @@
                         }
                     ],
                     "name": "_id_",
-                    "GUID": "a0811ff0-91f6-11e9-a924-ddc9cd9b071f"
+                    "GUID": "a0811ff0-91f6-11e9-a924-ddc9cd9b071f",
+                    "isActivated": true
                 }
             ],
             "collation": {},
             "isActivated": true,
             "hackoladeMeta": {
                 "validationErrors": {}
-            }
+            },
+            "additionalProperties": true
         }
     ],
     "buckets": [
@@ -2406,12 +2435,37 @@
         "9c7e0e45-91f6-11e9-a924-ddc9cd9b071f": "^[a-zA-Z0-9_.-]{4}$",
         "9c7e0e77-91f6-11e9-a924-ddc9cd9b071f": "type",
         "9c7dc021-91f6-11e9-a924-ddc9cd9b071f": "business_id",
-        "a080d1d0-91f6-11e9-a924-ddc9cd9b071f": "checkins(1)",
+        "a080d1d0-91f6-11e9-a924-ddc9cd9b071f": "checkins",
         "a0e40070-91f6-11e9-a924-ddc9cd9b071f": "yelp(1)",
         "c1cada70-91f6-11e9-a924-ddc9cd9b071f": "New Database",
         "003231f0-91f7-11e9-a924-ddc9cd9b071f": "fk businesses.business_id to checkins.business_id",
         "42970fb0-de10-11e9-b618-a12fa8f5b98e": "full_address",
-        "65013f10-4748-11eb-a6d2-ebfe0d19463b": "Domain view"
+        "65013f10-4748-11eb-a6d2-ebfe0d19463b": "Domain view",
+        "0dd81200-2b24-11e6-b7e5-591297143e36": "full_address",
+        "8a3660f0-2b26-11e6-b7e5-591297143e36": "fk_tipsBusinesses",
+        "7107ebf0-dc5b-11e9-b819-e3f2d5171928": "houseNum",
+        "aa956d50-2b26-11e6-b7e5-591297143e36": "fk_tipsUsers",
+        "760da090-dc5b-11e9-b819-e3f2d5171928": "street",
+        "e2514f70-2b26-11e6-b7e5-591297143e36": "fk_reviewsUsers",
+        "7bfbe070-dc5b-11e9-b819-e3f2d5171928": "box",
+        "fb857d40-2b26-11e6-b7e5-591297143e36": "fk_reviewsBusinesses",
+        "7ee803e0-dc5b-11e9-b819-e3f2d5171928": "city",
+        "85787730-dc5b-11e9-b819-e3f2d5171928": "state",
+        "87afc990-dc5b-11e9-b819-e3f2d5171928": "zip",
+        "b78e2c92-520d-11e7-8e65-9b1d6a151b1d": "business_id",
+        "b78e2c99-520d-11e7-8e65-9b1d6a151b1d": "name",
+        "b78e2c9f-520d-11e7-8e65-9b1d6a151b1d": "type",
+        "b78e2c9b-520d-11e7-8e65-9b1d6a151b1d": "open",
+        "b78e2c9d-520d-11e7-8e65-9b1d6a151b1d": "stars",
+        "b78e2c9c-520d-11e7-8e65-9b1d6a151b1d": "review_count",
+        "b78e2c95-520d-11e7-8e65-9b1d6a151b1d": "full_address",
+        "b78e2c97-520d-11e7-8e65-9b1d6a151b1d": "latitude",
+        "b78e2c98-520d-11e7-8e65-9b1d6a151b1d": "longitude",
+        "c1e4fe1a-520a-11e7-8e65-9b1d6a151b1d": "user_id",
+        "c1e4fe17-520a-11e7-8e65-9b1d6a151b1d": "name",
+        "c1e4fe19-520a-11e7-8e65-9b1d6a151b1d": "type",
+        "c1e4fe1b-520a-11e7-8e65-9b1d6a151b1d": "votes",
+        "c1e4fe1c-520a-11e7-8e65-9b1d6a151b1d": "yelping_since"
     },
     "definitions": {
         "GUID": "84a505d0-f031-11e6-8228-e5dfd33d2c24",
@@ -2502,6 +2556,11 @@
         ],
         "type": "definitions"
     },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "df98c413-a2f9-11ec-9d5f-d14771e0547e"
+    },
     "externalDefinitions": {
         "type": "externalDefinitions",
         "properties": [],
@@ -2520,24 +2579,22 @@
     ],
     "dbVersion": "v4.4",
     "dbVendor": "MongoDB",
-    "hideModelViews": false,
     "appTarget": "MONGODB",
     "creationTS": "2016-06-05T13:22:29.156Z",
     "GUID": "db8a6750-5b42-11e8-9c3f-1d376af9020b",
-    "lastModifTS": "2021-03-25T17:35:07.237Z",
-    "persistenceSchemaVersion": "4",
+    "lastModifTS": "2022-03-13T18:17:55.113Z",
+    "persistenceSchemaVersion": "5",
     "description": "Schema inferred from the reverse-engineering of a Yelp Challenge dataset available from https://www.yelp.com/dataset_challenge/dataset",
     "comments": "The dataset was downloaded and loaded to a MongoDB, then reverse-engineered with Hackolade.  The relationships were manually documented to enrich the model.\n\nThis schema shows the power of JSON with the embedding of many attributes logically grouped, one form of implicit relationships.  At the same time, the schema is fairly relational, which makes total sense given the conceptual entities.  As a result, there's no denormalization.  Given the size of the collections, it makes sense to perform this kind of traditional foreing key relationships.\n\nNote that only fields found in 100% of the sampled documents are 'required' (and differentiated thanks to a solid line box) as opposed to the other fields with dashed line boxes.\n\nThe sampling parameters were:\n- absolute up to 1000 documents max per collection\n- alpha order of fields",
     "author": "Pascal",
     "version": "1.2",
     "validation": "MongoDB extension",
-    "hideForeignMaster": true,
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "4.3.14"
+        "version": "5.4.8"
     },
     "hackoladeMeta": {
         "customPropertiesUpdated": true,
@@ -2552,8 +2609,13 @@
                 "erd": [
                     {
                         "GUID": "0da2aa00-2b24-11e6-b7e5-591297143e36",
+<<<<<<< Updated upstream
                         "x": 552.431849909021,
                         "y": 362.29341292039715,
+=======
+                        "x": 598.089394833932,
+                        "y": 389.86057465007696,
+>>>>>>> Stashed changes
                         "width": 264,
                         "height": 184,
                         "color": {
@@ -2583,8 +2645,8 @@
                     },
                     {
                         "GUID": "0dd7ead0-2b24-11e6-b7e5-591297143e36",
-                        "x": 114.09343942646625,
-                        "y": 151.35451376319804,
+                        "x": 121.7509843513773,
+                        "y": 178.92167549287782,
                         "width": 310,
                         "height": 835,
                         "color": {
@@ -2614,8 +2676,8 @@
                     },
                     {
                         "GUID": "0de02830-2b24-11e6-b7e5-591297143e36",
-                        "x": 556.431849909021,
-                        "y": 188.94525419730087,
+                        "x": 564.089394833932,
+                        "y": 216.51241592698065,
                         "width": 244,
                         "height": 128,
                         "color": {
@@ -2645,8 +2707,8 @@
                     },
                     {
                         "GUID": "0df0f110-2b24-11e6-b7e5-591297143e36",
-                        "x": 901.350633557534,
-                        "y": 150.35451376319804,
+                        "x": 909.008178482445,
+                        "y": 177.92167549287782,
                         "width": 281,
                         "height": 392,
                         "color": {
@@ -2808,8 +2870,8 @@
                     },
                     {
                         "GUID": "5c771580-5193-11e7-b9f2-49270a53df2c",
-                        "x": 547.4318499090206,
-                        "y": 741.344074825097,
+                        "x": 555.0893948339316,
+                        "y": 768.9112365547768,
                         "width": 276,
                         "height": 120,
                         "color": {
@@ -2838,8 +2900,8 @@
                     },
                     {
                         "GUID": "090874c0-5206-11e7-8e65-9b1d6a151b1d",
-                        "x": 906.3827828239179,
-                        "y": 560.225916697664,
+                        "x": 914.0403277488289,
+                        "y": 587.7930784273439,
                         "width": 252,
                         "height": 423,
                         "color": {
@@ -3129,8 +3191,8 @@
                     },
                     {
                         "GUID": "a080d1d0-91f6-11e9-a924-ddc9cd9b071f",
-                        "x": 526.431849909021,
-                        "y": 601.0734942937366,
+                        "x": 534.089394833932,
+                        "y": 628.6406560234165,
                         "width": 323,
                         "height": 114,
                         "color": {},
@@ -3139,8 +3201,8 @@
                 ],
                 "buckets": [
                     {
-                        "x": 74.09343942646625,
-                        "y": 74.11745788518682,
+                        "x": 81.7509843513773,
+                        "y": 101.6846196148666,
                         "GUID": "3dee5aa0-f5dc-11e6-aaa0-997d0683e5e6"
                     }
                 ],
@@ -3169,9 +3231,6 @@
                         }
                     ],
                     "decorativeSymbols": [],
-                    "hideRelationshipName": false,
-                    "showPropertiesBoxes": false,
-                    "nameAlongTheLine": false,
                     "forceLayout": true,
                     "defaultLinkLength": 300
                 },
@@ -3285,8 +3344,8 @@
                 "decorativeSymbols": [
                     {
                         "GUID": "db86d400-e115-11e9-9835-6108c7a098d9",
-                        "x": 499.280427214641,
-                        "y": 114.11745788518682,
+                        "x": 506.9379721395521,
+                        "y": 141.68461961486662,
                         "height": 56,
                         "width": 362
                     }
@@ -3299,8 +3358,6 @@
         },
         "dtDiagram": {
             "collapsedNodes": [],
-            "details": true,
-            "hideErdDetails": false,
             "shouldDistributeCollections": false
         }
     }
