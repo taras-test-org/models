@@ -2,7 +2,7 @@
     "modelName": "AdventureWorks derived from polyglotv1",
     "collections": [
         {
-            "collectionName": "Address123",
+            "collectionName": "AddressABC",
             "isActivated": true,
             "additionalProperties": true,
             "properties": [
@@ -140,9 +140,7 @@
             },
             "type": "object",
             "path": [],
-            "hackoladeMeta": {
-                "validationErrors": {}
-            },
+            "hackoladeMeta": {},
             "GUID": "bb784250-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
         },
@@ -371,7 +369,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb7b0170-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -471,7 +471,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb7d4b60-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -721,7 +723,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb820650-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -823,7 +827,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb845040-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -895,7 +901,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb86e850-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -985,7 +993,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb895950-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1080,7 +1090,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb8ba340-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1236,7 +1248,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb8e3b50-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1576,7 +1590,9 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {}
+                "validationErrors": {
+                    "code": true
+                }
             },
             "GUID": "bb90d360-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -2491,7 +2507,7 @@
     "users": [],
     "diagramViews": [],
     "idToNameHashTable": {
-        "bb784250-03d9-11ec-b847-e1184f4ea812": "Address",
+        "bb784250-03d9-11ec-b847-e1184f4ea812": "AddressABC",
         "bb7b0170-03d9-11ec-b847-e1184f4ea812": "Customer",
         "bb7d4b60-03d9-11ec-b847-e1184f4ea812": "CustomerAddress",
         "bb820650-03d9-11ec-b847-e1184f4ea812": "Product",
@@ -2834,7 +2850,6 @@
         "properties": [],
         "GUID": "b1488832-03d9-11ec-b847-e1184f4ea812"
     },
-    "modelAutoSaved": false,
     "sources": [],
     "decorativeSymbols": [],
     "dbVersion": "v2",
@@ -2849,8 +2864,8 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2022-03-24T10:10:25.883Z",
-    "persistenceSchemaVersion": "5",
+    "lastModifTS": "2022-03-28T09:02:39.733Z",
+    "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
@@ -2858,7 +2873,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "5.4.9"
+        "version": "6.0.0"
     },
     "settings": {
         "centralPane": {
@@ -2866,104 +2881,104 @@
                 "erd": [
                     {
                         "GUID": "bb784250-03d9-11ec-b847-e1184f4ea812",
-                        "x": 192.52730938900586,
-                        "y": 211.31246202748991,
+                        "x": 205.87208561385617,
+                        "y": 155.7092277572803,
                         "width": 277,
                         "height": 195,
                         "color": {}
                     },
                     {
                         "GUID": "bb7b0170-03d9-11ec-b847-e1184f4ea812",
-                        "x": 629.9015948451236,
-                        "y": 478.52850973689686,
+                        "x": 643.2463710699739,
+                        "y": 422.92527546668725,
                         "width": 288,
                         "height": 303,
                         "color": {}
                     },
                     {
                         "GUID": "bb7d4b60-03d9-11ec-b847-e1184f4ea812",
-                        "x": 643.9340816462964,
-                        "y": 239.7065717503445,
+                        "x": 657.2788578711467,
+                        "y": 184.10333748013488,
                         "width": 269,
                         "height": 123,
                         "color": {}
                     },
                     {
                         "GUID": "bb820650-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1178.133847240573,
-                        "y": 471.10369640293953,
+                        "x": 1191.4786234654234,
+                        "y": 415.5004621327299,
                         "width": 356,
                         "height": 339,
                         "color": {}
                     },
                     {
                         "GUID": "bb845040-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1024.2952370820533,
-                        "y": 236.1260410717453,
+                        "x": 1037.6400133069037,
+                        "y": 180.5228068015357,
                         "width": 337,
                         "height": 123,
                         "color": {}
                     },
                     {
                         "GUID": "bb86e850-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1781.295236128379,
-                        "y": 243.1260410717453,
+                        "x": 1794.6400123532294,
+                        "y": 187.5228068015357,
                         "width": 292,
                         "height": 105,
                         "color": {}
                     },
                     {
                         "GUID": "bb895950-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1429.295236128379,
-                        "y": 236.1260410717453,
+                        "x": 1442.6400123532294,
+                        "y": 180.5228068015357,
                         "width": 300,
                         "height": 123,
                         "color": {}
                     },
                     {
                         "GUID": "bb8ba340-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1686.0570210483747,
-                        "y": 482.126040118071,
+                        "x": 1699.401797273225,
+                        "y": 426.5228058478614,
                         "width": 310,
                         "height": 123,
                         "color": {}
                     },
                     {
                         "GUID": "bb8e3b50-03d9-11ec-b847-e1184f4ea812",
-                        "x": 632.4316185112706,
-                        "y": 839.8806329653187,
+                        "x": 645.7763947361209,
+                        "y": 784.277398695109,
                         "width": 294,
                         "height": 195,
                         "color": {}
                     },
                     {
                         "GUID": "bb90d360-03d9-11ec-b847-e1184f4ea812",
-                        "x": 171.52730938900586,
-                        "y": 485.3124610738156,
+                        "x": 184.87208561385617,
+                        "y": 429.709226803606,
                         "width": 337,
                         "height": 429,
                         "color": {}
                     },
                     {
                         "GUID": "bb936b70-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1703.4645381512123,
-                        "y": 826.1612805359434,
+                        "x": 1716.8093143760625,
+                        "y": 770.5580462657338,
                         "width": 259,
                         "height": 123,
                         "color": {}
                     },
                     {
                         "GUID": "bb969fc0-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1718.0178391257743,
-                        "y": 1033.6760368121631,
+                        "x": 1731.3626153506248,
+                        "y": 978.0728025419535,
                         "width": 304,
                         "height": 87,
                         "color": {}
                     },
                     {
                         "GUID": "bb9a2230-03d9-11ec-b847-e1184f4ea812",
-                        "x": 1208.8805399362525,
-                        "y": 862.634052047546,
+                        "x": 1222.225316161103,
+                        "y": 807.0308177773363,
                         "width": 314,
                         "height": 483,
                         "color": {}
@@ -2971,20 +2986,30 @@
                 ],
                 "buckets": [
                     {
-                        "x": 131.52730938900586,
-                        "y": 171.31246202748991,
+                        "x": 144.87208561385617,
+                        "y": 115.7092277572803,
                         "GUID": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
                     }
                 ],
-                "diagramViews": [],
-                "decorativeSymbols": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
                 "graphView": {
                     "erd": [],
                     "buckets": [],
                     "decorativeSymbols": [],
                     "forceLayout": true,
                     "defaultLinkLength": 300
-                }
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
             },
             "collectionLevel": {},
             "changed": false
@@ -2993,6 +3018,5 @@
             "collapsedNodes": [],
             "shouldDistributeCollections": false
         }
-    },
-    "modelChanged": true
+    }
 }
