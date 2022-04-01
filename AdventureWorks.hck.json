@@ -41,18 +41,6 @@
                 {
                     "primaryKey": false,
                     "type": "string",
-                    "name": "AddressLine2",
-                    "isActivated": true,
-                    "length": 60,
-                    "required": true,
-                    "relationshipType": "",
-                    "sample": null,
-                    "GUID": "61bd4a73-4b8d-11ec-ae71-d5c74b0d4990",
-                    "error": {}
-                },
-                {
-                    "primaryKey": false,
-                    "type": "string",
                     "name": "City",
                     "isActivated": true,
                     "length": 30,
@@ -2866,7 +2854,7 @@
                 "erd": [
                     {
                         "GUID": "bb784250-03d9-11ec-b847-e1184f4ea812",
-                        "x": 292.52730938900586,
+                        "x": 282.52730938900586,
                         "y": 211.31246202748991,
                         "width": 277,
                         "height": 195,
@@ -2891,9 +2879,9 @@
                     {
                         "GUID": "bb820650-03d9-11ec-b847-e1184f4ea812",
                         "x": 1178.133847240573,
-                        "y": 471.10369640293953,
+                        "y": 451.10369640293953,
                         "width": 356,
-                        "height": 339,
+                        "height": 341,
                         "color": {}
                     },
                     {
