@@ -1705,6 +1705,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         },
         {
@@ -1768,6 +1771,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         },
         {
@@ -2183,6 +2189,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         }
     ],
@@ -2822,7 +2831,6 @@
         "properties": [],
         "GUID": "b1488832-03d9-11ec-b847-e1184f4ea812"
     },
-    "modelAutoSaved": false,
     "sources": [],
     "decorativeSymbols": [],
     "dbVersion": "v2",
@@ -2834,27 +2842,28 @@
     "polyglotModelPaths": [],
     "hackoladeMeta": {
         "validationErrors": {
-            "modelName": false
+            "code": false
         }
     },
-    "lastModifTS": "2022-03-24T10:10:25.883Z",
-    "persistenceSchemaVersion": "5",
+    "lastModifTS": "2022-06-14T10:23:04.505Z",
+    "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
-        "pluginVersion": "0.1.2",
+        "pluginVersion": "0.1.6",
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "5.4.9"
+        "version": "6.1.3"
     },
+    "code": "thisistechname",
     "settings": {
         "centralPane": {
             "dbLevel": {
                 "erd": [
                     {
                         "GUID": "bb784250-03d9-11ec-b847-e1184f4ea812",
-                        "x": 282.52730938900586,
+                        "x": 282.52730938900584,
                         "y": 211.31246202748991,
                         "width": 277,
                         "height": 195,
@@ -2964,15 +2973,25 @@
                         "GUID": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
                     }
                 ],
-                "diagramViews": [],
-                "decorativeSymbols": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
                 "graphView": {
                     "erd": [],
                     "buckets": [],
                     "decorativeSymbols": [],
                     "forceLayout": true,
                     "defaultLinkLength": 300
-                }
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": []
             },
             "collectionLevel": {},
             "changed": false
@@ -2981,6 +3000,5 @@
             "collapsedNodes": [],
             "shouldDistributeCollections": false
         }
-    },
-    "modelChanged": true
+    }
 }
