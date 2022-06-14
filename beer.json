@@ -145,7 +145,10 @@
             },
             "collectionName": "beer",
             "isActivated": true,
-            "additionalProperties": true
+            "additionalProperties": true,
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
         },
         {
             "bucketId": "e2117090-ffeb-11e6-bc11-bba283d07659",
@@ -214,7 +217,9 @@
                     "relationshipType": "",
                     "required": true,
                     "sample": "94107",
-                    "isActivated": true
+                    "isActivated": true,
+                    "description": "a common description",
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -340,7 +345,10 @@
             },
             "collectionName": "brewery",
             "isActivated": true,
-            "additionalProperties": true
+            "additionalProperties": true,
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
         }
     ],
     "buckets": [
@@ -458,15 +466,15 @@
     "appTarget": "COUCHBASE",
     "creationTS": "2017-03-03T08:31:48.344Z",
     "GUID": "d7bfaf80-ffeb-11e6-bc11-bba283d07659",
-    "lastModifTS": "2022-03-23T19:24:29.260Z",
-    "persistenceSchemaVersion": "5",
+    "lastModifTS": "2022-06-14T10:39:07.269Z",
+    "persistenceSchemaVersion": "6",
     "description": "beer-sample application described in http://docs.couchbase.com/admin/admin/Misc/sample-bucket-beer.html",
     "comments": "",
     "author": "",
     "version": "",
     "hackoladeMeta": {
         "validationErrors": {
-            "modelName": false
+            "code": false
         },
         "customPropertiesUpdated": true
     },
@@ -475,8 +483,9 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "5.4.9"
+        "version": "6.1.3"
     },
+    "code": "another techinacl change",
     "settings": {
         "centralPane": {
             "dbLevel": {
