@@ -2,7 +2,7 @@
     "modelName": "AdventureWorks derived from polyglotv1",
     "collections": [
         {
-            "collectionName": "AddressABC",
+            "collectionName": "Address123",
             "isActivated": true,
             "additionalProperties": true,
             "properties": [
@@ -140,7 +140,9 @@
             },
             "type": "object",
             "path": [],
-            "hackoladeMeta": {},
+            "hackoladeMeta": {
+                "validationErrors": {}
+            },
             "GUID": "bb784250-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
         },
@@ -369,9 +371,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb7b0170-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -471,9 +471,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb7d4b60-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -723,9 +721,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb820650-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -827,9 +823,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb845040-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -901,9 +895,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb86e850-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -993,9 +985,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb895950-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1090,9 +1080,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb8ba340-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1248,9 +1236,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb8e3b50-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1590,9 +1576,7 @@
             "type": "object",
             "path": [],
             "hackoladeMeta": {
-                "validationErrors": {
-                    "code": true
-                }
+                "validationErrors": {}
             },
             "GUID": "bb90d360-03d9-11ec-b847-e1184f4ea812",
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
@@ -1616,6 +1600,16 @@
             },
             "GUID": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "collectionIds": [
+                "bb784250-03d9-11ec-b847-e1184f4ea812",
+                "bb7b0170-03d9-11ec-b847-e1184f4ea812",
+                "bb7d4b60-03d9-11ec-b847-e1184f4ea812",
+                "bb820650-03d9-11ec-b847-e1184f4ea812",
+                "bb845040-03d9-11ec-b847-e1184f4ea812",
+                "bb86e850-03d9-11ec-b847-e1184f4ea812",
+                "bb895950-03d9-11ec-b847-e1184f4ea812",
+                "bb8ba340-03d9-11ec-b847-e1184f4ea812",
+                "bb8e3b50-03d9-11ec-b847-e1184f4ea812",
+                "bb90d360-03d9-11ec-b847-e1184f4ea812",
                 "bb784250-03d9-11ec-b847-e1184f4ea812",
                 "bb7b0170-03d9-11ec-b847-e1184f4ea812",
                 "bb7d4b60-03d9-11ec-b847-e1184f4ea812",
@@ -1733,6 +1727,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         },
         {
@@ -1796,6 +1793,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         },
         {
@@ -2211,6 +2211,9 @@
             "bucketId": "bbad5c10-03d9-11ec-b847-e1184f4ea812",
             "definitions": {
                 "properties": []
+            },
+            "hackoladeMeta": {
+                "validationErrors": {}
             }
         }
     ],
@@ -2507,7 +2510,7 @@
     "users": [],
     "diagramViews": [],
     "idToNameHashTable": {
-        "bb784250-03d9-11ec-b847-e1184f4ea812": "AddressABC",
+        "bb784250-03d9-11ec-b847-e1184f4ea812": "Address",
         "bb7b0170-03d9-11ec-b847-e1184f4ea812": "Customer",
         "bb7d4b60-03d9-11ec-b847-e1184f4ea812": "CustomerAddress",
         "bb820650-03d9-11ec-b847-e1184f4ea812": "Product",
@@ -2864,16 +2867,16 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2022-03-28T09:05:49.614Z",
+    "lastModifTS": "2022-06-30T17:43:58.418Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
-        "pluginVersion": "0.1.2",
+        "pluginVersion": "0.1.6",
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.0.0"
+        "version": "6.2.2"
     },
     "settings": {
         "centralPane": {
@@ -2991,25 +2994,15 @@
                         "GUID": "bbad5c10-03d9-11ec-b847-e1184f4ea812"
                     }
                 ],
-                "collapsedNodes": [],
-                "activeRelationship": "",
-                "activeRelationshipFields": {
-                    "childField": [],
-                    "parentField": []
-                },
-                "selectedCollections": [],
-                "displayColorPicker": false,
+                "diagramViews": [],
+                "decorativeSymbols": [],
                 "graphView": {
                     "erd": [],
                     "buckets": [],
                     "decorativeSymbols": [],
                     "forceLayout": true,
                     "defaultLinkLength": 300
-                },
-                "diagramViews": [],
-                "decorativeSymbols": [],
-                "nestedCollectionsLayout": "horizontal",
-                "options": []
+                }
             },
             "collectionLevel": {},
             "changed": false
