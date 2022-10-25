@@ -1104,7 +1104,7 @@
                     ],
                     "GUID": "0de02832-2b24-11e6-b7e5-591297143e36",
                     "required": true,
-                    "name": "business_id",
+                    "name": "businessId",
                     "isActivated": true,
                     "error": {}
                 },
@@ -1784,7 +1784,10 @@
             "pipeline": "[\n    {\n        \"$project\": {\n            \"business_id\": 1,\n            \"name\": 1,\n            \"full_address\": {\n                \"houseNum\": \"$full_address.houseNum\",\n                \"street\": \"$full_address.street\",\n                \"box\": \"$full_address.box\",\n                \"city\": \"$full_address.city\",\n                \"state\": \"$full_address.state\",\n                \"zip\": \"$full_address.zip\"\n            },\n            \"type\": 1\n        }\n    }\n]",
             "GUID": "5c771580-5193-11e7-b9f2-49270a53df2c",
             "bucketId": "3dee5aa0-f5dc-11e6-aaa0-997d0683e5e6",
-            "isActivated": true
+            "isActivated": true,
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
         },
         {
             "code": "",
@@ -2117,7 +2120,10 @@
             "pipeline": "[\n    {\n        \"$project\": {\n            \"review_id\": 1,\n            \"date\": 1,\n            \"stars\": 1,\n            \"type\": 1,\n            \"business\": {\n                \"business_id\": \"$business_id\",\n                \"name\": \"$name\",\n                \"type\": \"$type\",\n                \"open\": \"$open\",\n                \"stars\": \"$stars\",\n                \"review_count\": \"$review_count\",\n                \"full_address\": {\n                    \"houseNum\": \"$full_address.houseNum\",\n                    \"street\": \"$full_address.street\",\n                    \"box\": \"$full_address.box\",\n                    \"city\": \"$full_address.city\",\n                    \"state\": \"$full_address.state\",\n                    \"zip\": \"$full_address.zip\"\n                },\n                \"latitude\": \"$latitude\",\n                \"longitude\": \"$longitude\"\n            },\n            \"user\": {\n                \"user_id\": \"$user_id\",\n                \"name\": \"$name\",\n                \"type\": \"$type\",\n                \"votes\": {\n                    \"cool\": \"$votes.cool\",\n                    \"funny\": \"$votes.funny\",\n                    \"useful\": \"$votes.useful\"\n                },\n                \"yelping_since\": \"$yelping_since\"\n            }\n        }\n    },\n    {\n        \"$lookup\": {\n            \"from\": \"businesses\",\n            \"as\": \"business\",\n            \"localField\": \"business_id\",\n            \"foreignField\": \"_id\"\n        }\n    },\n    {\n        \"$lookup\": {\n            \"from\": \"users\",\n            \"as\": \"username\",\n            \"localField\": \"user_id\",\n            \"foreignField\": \"name\"\n        }\n    }\n]",
             "GUID": "090874c0-5206-11e7-8e65-9b1d6a151b1d",
             "bucketId": "3dee5aa0-f5dc-11e6-aaa0-997d0683e5e6",
-            "isActivated": true
+            "isActivated": true,
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
         }
     ],
     "relationships": [
@@ -2357,7 +2363,7 @@
         "0dd81220-2b24-11e6-b7e5-591297143e36": "type",
         "0dd7ead0-2b24-11e6-b7e5-591297143e36": "businesses",
         "0de02831-2b24-11e6-b7e5-591297143e36": "_id",
-        "0de02832-2b24-11e6-b7e5-591297143e36": "business_id",
+        "0de02832-2b24-11e6-b7e5-591297143e36": "businessId",
         "0de02833-2b24-11e6-b7e5-591297143e36": "date",
         "0de02834-2b24-11e6-b7e5-591297143e36": "likes",
         "0de02835-2b24-11e6-b7e5-591297143e36": "text",
@@ -2574,7 +2580,8 @@
             "value": "Hackolade demo",
             "name": "Yelp data model",
             "bucketId": "3dee5aa0-f5dc-11e6-aaa0-997d0683e5e6",
-            "disableInitialFocus": true
+            "disableInitialFocus": true,
+            "isActivated": true
         }
     ],
     "dbVersion": "v4.4",
@@ -2582,8 +2589,8 @@
     "appTarget": "MONGODB",
     "creationTS": "2016-06-05T13:22:29.156Z",
     "GUID": "db8a6750-5b42-11e8-9c3f-1d376af9020b",
-    "lastModifTS": "2022-03-13T18:17:55.113Z",
-    "persistenceSchemaVersion": "5",
+    "lastModifTS": "2022-10-24T12:35:27.079Z",
+    "persistenceSchemaVersion": "6",
     "description": "Schema inferred from the reverse-engineering of a Yelp Challenge dataset available from https://www.yelp.com/dataset_challenge/dataset",
     "comments": "The dataset was downloaded and loaded to a MongoDB, then reverse-engineered with Hackolade.  The relationships were manually documented to enrich the model.\n\nThis schema shows the power of JSON with the embedding of many attributes logically grouped, one form of implicit relationships.  At the same time, the schema is fairly relational, which makes total sense given the conceptual entities.  As a result, there's no denormalization.  Given the size of the collections, it makes sense to perform this kind of traditional foreing key relationships.\n\nNote that only fields found in 100% of the sampled documents are 'required' (and differentiated thanks to a solid line box) as opposed to the other fields with dashed line boxes.\n\nThe sampling parameters were:\n- absolute up to 1000 documents max per collection\n- alpha order of fields",
     "author": "Pascal",
@@ -2594,7 +2601,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "5.4.8"
+        "version": "6.5.3"
     },
     "hackoladeMeta": {
         "customPropertiesUpdated": true,
@@ -2609,13 +2616,8 @@
                 "erd": [
                     {
                         "GUID": "0da2aa00-2b24-11e6-b7e5-591297143e36",
-<<<<<<< Updated upstream
-                        "x": 552.431849909021,
-                        "y": 362.29341292039715,
-=======
                         "x": 598.089394833932,
                         "y": 389.86057465007696,
->>>>>>> Stashed changes
                         "width": 264,
                         "height": 184,
                         "color": {
@@ -2678,7 +2680,7 @@
                         "GUID": "0de02830-2b24-11e6-b7e5-591297143e36",
                         "x": 564.089394833932,
                         "y": 216.51241592698065,
-                        "width": 244,
+                        "width": 205,
                         "height": 128,
                         "color": {
                             "hsl": {
@@ -3202,7 +3204,7 @@
                 "buckets": [
                     {
                         "x": 81.7509843513773,
-                        "y": 101.6846196148666,
+                        "y": 101.68461961486662,
                         "GUID": "3dee5aa0-f5dc-11e6-aaa0-997d0683e5e6"
                     }
                 ],
@@ -3273,7 +3275,7 @@
                                 "GUID": "0de02830-2b24-11e6-b7e5-591297143e36",
                                 "x": 557.3921534335423,
                                 "y": 128.71362907087837,
-                                "width": 244,
+                                "width": 205,
                                 "height": 128,
                                 "color": {
                                     "hsl": {
