@@ -143,12 +143,10 @@
                 "properties": [],
                 "type": "definitions"
             },
-            "collectionName": "beer",
+            "collectionName": "beer-new-name",
             "isActivated": true,
             "additionalProperties": true,
-            "hackoladeMeta": {
-                "validationErrors": {}
-            }
+            "hackoladeMeta": {}
         },
         {
             "bucketId": "e2117090-ffeb-11e6-bc11-bba283d07659",
@@ -423,7 +421,7 @@
         "e1f50efa-ffeb-11e6-bc11-bba283d07659": "description",
         "e1f50efb-ffeb-11e6-bc11-bba283d07659": "style",
         "e1f50efc-ffeb-11e6-bc11-bba283d07659": "category",
-        "e1f50ef1-ffeb-11e6-bc11-bba283d07659": "beer",
+        "e1f50ef1-ffeb-11e6-bc11-bba283d07659": "beer-new-name",
         "e1f5d252-ffeb-11e6-bc11-bba283d07659": "KEY",
         "e1f5d249-ffeb-11e6-bc11-bba283d07659": "type",
         "e1f5d242-ffeb-11e6-bc11-bba283d07659": "name",
@@ -466,7 +464,7 @@
     "appTarget": "COUCHBASE",
     "creationTS": "2017-03-03T08:31:48.344Z",
     "GUID": "d7bfaf80-ffeb-11e6-bc11-bba283d07659",
-    "lastModifTS": "2022-07-22T08:35:58.793Z",
+    "lastModifTS": "2022-10-26T10:53:41.740Z",
     "persistenceSchemaVersion": "6",
     "description": "beer-sample application described in http://docs.couchbase.com/admin/admin/Misc/sample-bucket-beer.html",
     "comments": "",
@@ -483,7 +481,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.2.4"
+        "version": "6.6.0"
     },
     "code": "another techinacl change",
     "settings": {
@@ -598,7 +596,7 @@
                         "GUID": "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
                         "x": 375,
                         "y": 96,
-                        "width": 195,
+                        "width": 216,
                         "height": 203,
                         "color": {
                             "hsl": {
