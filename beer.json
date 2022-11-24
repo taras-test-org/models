@@ -358,6 +358,10 @@
             "type": "bucket",
             "collectionIds": [
                 "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
+                "e1f5d241-ffeb-11e6-bc11-bba283d07659",
+                "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
+                "e1f5d241-ffeb-11e6-bc11-bba283d07659",
+                "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
                 "e1f5d241-ffeb-11e6-bc11-bba283d07659"
             ],
             "backgroundColor": {
@@ -461,12 +465,12 @@
     },
     "sources": [],
     "decorativeSymbols": [],
-    "dbVendor": "Couchbase",
     "dbVersion": "v4.6",
+    "dbVendor": "Couchbase",
     "appTarget": "COUCHBASE",
     "creationTS": "2017-03-03T08:31:48.344Z",
     "GUID": "d7bfaf80-ffeb-11e6-bc11-bba283d07659",
-    "lastModifTS": "2022-10-26T11:14:37.866Z",
+    "lastModifTS": "2022-11-24T13:16:01.759Z",
     "persistenceSchemaVersion": "6",
     "description": "beer-sample application described in http://docs.couchbase.com/admin/admin/Misc/sample-bucket-beer.html",
     "comments": "",
@@ -483,117 +487,13 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.6.0"
+        "version": "6.6.4"
     },
     "code": "another techinacl change",
     "settings": {
         "centralPane": {
             "dbLevel": {
                 "erd": [
-                    {
-                        "GUID": "ac2105a1-fac7-11e6-9f58-33155ddb31fb",
-                        "x": 101,
-                        "y": 235,
-                        "width": 193,
-                        "height": 135,
-                        "color": {
-                            "hsl": {
-                                "h": 3.789473684210526,
-                                "s": 0.904761904761905,
-                                "l": 0.5882352941176471,
-                                "a": 1
-                            },
-                            "hex": "#f54337",
-                            "rgb": {
-                                "r": 245,
-                                "g": 67,
-                                "b": 55,
-                                "a": 1
-                            },
-                            "hsv": {
-                                "h": 3.789473684210526,
-                                "s": 0.7755102040816326,
-                                "v": 0.9607843137254902,
-                                "a": 1
-                            },
-                            "oldHue": 3.789473684210526,
-                            "source": "hex"
-                        }
-                    },
-                    {
-                        "GUID": "ac21a1e1-fac7-11e6-9f58-33155ddb31fb",
-                        "x": 96,
-                        "y": 530,
-                        "width": 204,
-                        "height": 203,
-                        "color": {
-                            "hsl": {
-                                "h": 3.789473684210526,
-                                "s": 0.904761904761905,
-                                "l": 0.5882352941176471,
-                                "a": 1
-                            },
-                            "hex": "#f54337",
-                            "rgb": {
-                                "r": 245,
-                                "g": 67,
-                                "b": 55,
-                                "a": 1
-                            },
-                            "hsv": {
-                                "h": 3.789473684210526,
-                                "s": 0.7755102040816326,
-                                "v": 0.9607843137254902,
-                                "a": 1
-                            },
-                            "oldHue": 3.789473684210526,
-                            "source": "hex"
-                        }
-                    },
-                    {
-                        "GUID": "ac230171-fac7-11e6-9f58-33155ddb31fb",
-                        "x": 690,
-                        "y": 237,
-                        "width": 308,
-                        "height": 519
-                    },
-                    {
-                        "GUID": "ac23c4c1-fac7-11e6-9f58-33155ddb31fb",
-                        "x": 374,
-                        "y": 540,
-                        "width": 225,
-                        "height": 245
-                    },
-                    {
-                        "GUID": "ac2412e1-fac7-11e6-9f58-33155ddb31fb",
-                        "x": 370,
-                        "y": 235,
-                        "width": 234,
-                        "height": 245,
-                        "color": {
-                            "hsl": {
-                                "h": 3.789473684210526,
-                                "s": 0.904761904761905,
-                                "l": 0.5882352941176471,
-                                "a": 1
-                            },
-                            "hex": "#f54337",
-                            "rgb": {
-                                "r": 245,
-                                "g": 67,
-                                "b": 55,
-                                "a": 1
-                            },
-                            "hsv": {
-                                "h": 3.789473684210526,
-                                "s": 0.7755102040816326,
-                                "v": 0.9607843137254902,
-                                "a": 1
-                            },
-                            "oldHue": 3.789473684210526,
-                            "source": "hex"
-                        }
-                    },
                     {
                         "GUID": "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
                         "x": 375,
@@ -653,69 +553,6 @@
                             "oldHue": 3.789473684210526,
                             "source": "hex"
                         }
-                    },
-                    {
-                        "GUID": "2e5777a0-f3e6-11e5-9c39-49b275bf0df4",
-                        "x": 480,
-                        "y": 355,
-                        "width": 233,
-                        "height": 101
-                    },
-                    {
-                        "GUID": "4a8e3c70-f3f9-11e5-938a-bd54cc414623",
-                        "x": 61,
-                        "y": 516,
-                        "width": 200,
-                        "height": 75
-                    },
-                    {
-                        "GUID": "c2b2c8b0-f417-11e5-938a-bd54cc414623",
-                        "x": 429,
-                        "y": 472,
-                        "width": 200,
-                        "height": 100
-                    },
-                    {
-                        "GUID": "4a014da0-f418-11e5-a6f2-dbf6571c2b51",
-                        "x": 422,
-                        "y": 485,
-                        "width": 200,
-                        "height": 100
-                    },
-                    {
-                        "GUID": "8439e830-f41b-11e5-ad3f-7d283a6e1eb9",
-                        "x": 453.5,
-                        "y": 494,
-                        "width": 233,
-                        "height": 116
-                    },
-                    {
-                        "GUID": "6e9a9cc0-f422-11e5-ab1e-4fda87c84016",
-                        "x": 431,
-                        "y": 485,
-                        "width": 314,
-                        "height": 204
-                    },
-                    {
-                        "GUID": "166589b0-0440-11e6-a1a6-29098b60dd65",
-                        "x": 87,
-                        "y": 133,
-                        "width": 234,
-                        "height": 166
-                    },
-                    {
-                        "GUID": "46aed5e0-0440-11e6-a1a6-29098b60dd65",
-                        "x": 399,
-                        "y": 46,
-                        "width": 315,
-                        "height": 277
-                    },
-                    {
-                        "GUID": "b63dd6c0-0721-11e6-a0f3-475ccb6d8902",
-                        "x": 459,
-                        "y": 438,
-                        "width": 200,
-                        "height": 100
                     }
                 ],
                 "buckets": [
@@ -725,25 +562,15 @@
                         "GUID": "e2117090-ffeb-11e6-bc11-bba283d07659"
                     }
                 ],
-                "collapsedNodes": [],
-                "activeRelationship": "",
-                "activeRelationshipFields": {
-                    "childField": [],
-                    "parentField": []
-                },
-                "selectedCollections": [],
-                "displayColorPicker": false,
+                "diagramViews": [],
+                "decorativeSymbols": [],
                 "graphView": {
                     "erd": [],
                     "buckets": [],
                     "decorativeSymbols": [],
                     "forceLayout": true,
                     "defaultLinkLength": 300
-                },
-                "diagramViews": [],
-                "decorativeSymbols": [],
-                "nestedCollectionsLayout": "horizontal",
-                "options": []
+                }
             },
             "collectionLevel": {},
             "changed": false
