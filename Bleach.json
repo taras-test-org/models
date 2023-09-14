@@ -1,0 +1,240 @@
+{
+    "modelName": "Bleach",
+    "collections": [
+        {
+            "collectionName": "basic_characteristic",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "name",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "GUID": "936d2f40-7bc7-49a7-84cd-549b1e122516",
+                    "error": {}
+                },
+                {
+                    "name": "surname",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "GUID": "77f3c82b-5672-47e4-b651-fc99ee0a8ee9",
+                    "error": {}
+                },
+                {
+                    "name": "age",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "GUID": "24c0f632-520d-43e9-9d41-86a3266bbd45"
+                },
+                {
+                    "name": "date_of_birth",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "childType": "timestamp",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "231f4590-056f-4f53-bfbc-ac78e10ff777"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "077b3afa-8bef-4b59-a507-261c4e4d7725"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "tableType": "Native",
+            "partitioning": "No partitioning",
+            "partitioningType": "",
+            "encryption": "Google-managed",
+            "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
+            "bucketId": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "characters",
+            "type": "bucket",
+            "collectionIds": [
+                "a25ab129-d8a3-4b8a-8f24-6637774b0ead"
+            ],
+            "backgroundColor": {
+                "r": 187,
+                "g": 187,
+                "b": 187,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "unlimitedQuota": false,
+            "dataLocation": "default",
+            "encryption": "Google-managed",
+            "GUID": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "cf343fc7-8cfe-4a23-bd52-802ce22c41dc": "characters",
+        "a25ab129-d8a3-4b8a-8f24-6637774b0ead": "basic_characteristic",
+        "936d2f40-7bc7-49a7-84cd-549b1e122516": "name",
+        "77f3c82b-5672-47e4-b651-fc99ee0a8ee9": "surname",
+        "24c0f632-520d-43e9-9d41-86a3266bbd45": "age",
+        "231f4590-056f-4f53-bfbc-ac78e10ff777": "date_of_birth"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e4c81ab6-d07a-4fed-8eba-a07b32ef31df"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "98eed3e9-755e-41b6-9509-6a72001163ef"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "6e71b895-e795-40b2-a115-f884fa61a601"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v2",
+    "dbVendor": "BigQuery",
+    "appTarget": "BigQuery",
+    "creationTS": "2023-09-14T10:25:51.065Z",
+    "GUID": "0616ee0e-0c77-4dab-ba9c-24a60980c442",
+    "isLineageEnabled": false,
+    "hackoladeMeta": {
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "lastModifTS": "2023-09-14T10:28:56.503Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "BigQuery",
+        "pluginVersion": "0.1.21",
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.10.20"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
+                        "x": 1079,
+                        "y": 1081,
+                        "width": 189,
+                        "height": 115,
+                        "color": {}
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [
+                    {
+                        "x": 1039,
+                        "y": 1041,
+                        "GUID": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead"
+                    }
+                ],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
