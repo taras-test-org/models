@@ -87,6 +87,35 @@
                     "compositePrimaryKey": false,
                     "error": {},
                     "GUID": "231f4590-056f-4f53-bfbc-ac78e10ff777"
+                },
+                {
+                    "name": "character_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "8a701320-69ca-4ca6-93e3-ccefd311d0af",
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                    "foreignField": [
+                        "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                        "e71d0946-9930-4ca4-95f6-888c5ab535eb"
+                    ],
+                    "parentRelationship": "cec309e2-1327-4cf8-99ce-d5884e3f57be"
                 }
             ],
             "definitions": {
@@ -102,14 +131,238 @@
             "encryption": "Google-managed",
             "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
             "bucketId": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
+        },
+        {
+            "collectionName": "skills",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "strength",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "2c2a8792-fe52-4f15-8792-85a110abc27d"
+                },
+                {
+                    "name": "intelligence",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "88ac7541-3317-4427-9b63-1d7f21b7038a"
+                },
+                {
+                    "name": "dexterity",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "1c221fa8-641e-4e02-997c-1e229572168f"
+                },
+                {
+                    "name": "speed",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "27ad1101-4154-4ec6-8153-aa34a9cb2531"
+                },
+                {
+                    "name": "character_id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "f2c797a1-695e-49c3-9917-13f6a3b92724",
+                    "relationshipType": "Foreign Key",
+                    "foreignCollection": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                    "foreignField": [
+                        "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                        "e71d0946-9930-4ca4-95f6-888c5ab535eb"
+                    ],
+                    "parentRelationship": "cb314183-715a-453b-957a-a6eee178c357"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "ff9959aa-ff3c-4d44-8ea2-3c76075bd6d7"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "tableType": "Native",
+            "partitioning": "No partitioning",
+            "partitioningType": "",
+            "encryption": "Google-managed",
+            "GUID": "862a0bde-0ec8-49fb-801b-11375b9b9de8",
+            "bucketId": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
+        },
+        {
+            "collectionName": "characters",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "exclusiveMinimum": false,
+                    "exclusiveMaximum": false,
+                    "childType": "numeric",
+                    "type": "numeric",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "GUID": "e71d0946-9930-4ca4-95f6-888c5ab535eb",
+                    "primaryKey": true,
+                    "error": {},
+                    "childRelationships": [
+                        "cb314183-715a-453b-957a-a6eee178c357",
+                        "cec309e2-1327-4cf8-99ce-d5884e3f57be"
+                    ]
+                },
+                {
+                    "name": "created_at",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Required",
+                    "childType": "timestamp",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "GUID": "26371c14-ff65-4f5d-a62d-5e5f72ec49a3",
+                    "error": {}
+                },
+                {
+                    "name": "updated_at",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Required",
+                    "childType": "timestamp",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "error": {},
+                    "GUID": "068f331b-b906-4214-8f57-8e8c3ec320fe"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "40f8901f-7737-4d05-87e7-548b32641bf5"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "tableType": "Native",
+            "partitioning": "No partitioning",
+            "partitioningType": "",
+            "encryption": "Google-managed",
+            "GUID": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+            "bucketId": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
         }
     ],
     "buckets": [
         {
-            "name": "characters",
+            "name": "Characters",
             "type": "bucket",
             "collectionIds": [
-                "a25ab129-d8a3-4b8a-8f24-6637774b0ead"
+                "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
+                "862a0bde-0ec8-49fb-801b-11375b9b9de8",
+                "99d1df35-2e09-4e4a-bafe-086df0ace5d3"
             ],
             "backgroundColor": {
                 "r": 187,
@@ -126,16 +379,134 @@
         }
     ],
     "views": [],
-    "relationships": [],
+    "relationships": [
+        {
+            "name": "fk skills.character_id to characters.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                    "e71d0946-9930-4ca4-95f6-888c5ab535eb"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "862a0bde-0ec8-49fb-801b-11375b9b9de8",
+                    "f2c797a1-695e-49c3-9917-13f6a3b92724"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "parentCollection": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+            "childCollection": "862a0bde-0ec8-49fb-801b-11375b9b9de8",
+            "GUID": "cb314183-715a-453b-957a-a6eee178c357",
+            "hackoladeStyles": {
+                "GUID": "e7ca0d74-43f0-4f69-b432-b4f7eaecd623",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1597.5,
+                        "y": 1217
+                    },
+                    {
+                        "x": 1597.5,
+                        "y": 1243.5
+                    },
+                    {
+                        "x": 1427.6666666666667,
+                        "y": 1243.5
+                    },
+                    {
+                        "x": 1427.6666666666667,
+                        "y": 1270
+                    }
+                ],
+                "sides": [
+                    "bottom",
+                    "top"
+                ]
+            }
+        },
+        {
+            "name": "fk basic_characteristic.character_id to characters.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                    "e71d0946-9930-4ca4-95f6-888c5ab535eb"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
+                    "8a701320-69ca-4ca6-93e3-ccefd311d0af"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "parentCollection": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+            "childCollection": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
+            "GUID": "cec309e2-1327-4cf8-99ce-d5884e3f57be",
+            "hackoladeStyles": {
+                "GUID": "89ff41c7-c585-4c5a-b68a-52ec05841433",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1176,
+                        "y": 1216
+                    },
+                    {
+                        "x": 1176,
+                        "y": 1243
+                    },
+                    {
+                        "x": 1338.3333333333333,
+                        "y": 1243
+                    },
+                    {
+                        "x": 1338.3333333333333,
+                        "y": 1270
+                    }
+                ],
+                "sides": [
+                    "bottom",
+                    "top"
+                ]
+            }
+        }
+    ],
     "users": [],
     "diagramViews": [],
     "idToNameHashTable": {
-        "cf343fc7-8cfe-4a23-bd52-802ce22c41dc": "characters",
+        "cf343fc7-8cfe-4a23-bd52-802ce22c41dc": "Characters",
         "a25ab129-d8a3-4b8a-8f24-6637774b0ead": "basic_characteristic",
         "936d2f40-7bc7-49a7-84cd-549b1e122516": "name",
         "77f3c82b-5672-47e4-b651-fc99ee0a8ee9": "surname",
         "24c0f632-520d-43e9-9d41-86a3266bbd45": "age",
-        "231f4590-056f-4f53-bfbc-ac78e10ff777": "date_of_birth"
+        "231f4590-056f-4f53-bfbc-ac78e10ff777": "date_of_birth",
+        "862a0bde-0ec8-49fb-801b-11375b9b9de8": "skills",
+        "2c2a8792-fe52-4f15-8792-85a110abc27d": "strength",
+        "88ac7541-3317-4427-9b63-1d7f21b7038a": "intelligence",
+        "1c221fa8-641e-4e02-997c-1e229572168f": "dexterity",
+        "27ad1101-4154-4ec6-8153-aa34a9cb2531": "speed",
+        "99d1df35-2e09-4e4a-bafe-086df0ace5d3": "characters",
+        "e71d0946-9930-4ca4-95f6-888c5ab535eb": "id",
+        "8a701320-69ca-4ca6-93e3-ccefd311d0af": "character_id",
+        "f2c797a1-695e-49c3-9917-13f6a3b92724": "character_id",
+        "cb314183-715a-453b-957a-a6eee178c357": "fk skills.character_id to characters.id",
+        "cec309e2-1327-4cf8-99ce-d5884e3f57be": "fk basic_characteristic.character_id to characters.id",
+        "26371c14-ff65-4f5d-a62d-5e5f72ec49a3": "created_at",
+        "068f331b-b906-4214-8f57-8e8c3ec320fe": "updated_at"
     },
     "definitions": {
         "type": "definitions",
@@ -165,16 +536,16 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2023-09-14T10:28:56.503Z",
+    "lastModifTS": "2023-09-27T09:27:33.414Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
-        "pluginVersion": "0.1.21",
+        "pluginVersion": "0.1.22",
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.10.20"
+        "version": "6.11.0"
     },
     "settings": {
         "centralPane": {
@@ -184,8 +555,24 @@
                         "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
                         "x": 1079,
                         "y": 1081,
-                        "width": 189,
-                        "height": 115,
+                        "width": 194,
+                        "height": 135,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "862a0bde-0ec8-49fb-801b-11375b9b9de8",
+                        "x": 1467,
+                        "y": 1077,
+                        "width": 261,
+                        "height": 140,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "99d1df35-2e09-4e4a-bafe-086df0ace5d3",
+                        "x": 1249,
+                        "y": 1270,
+                        "width": 268,
+                        "height": 101,
                         "color": {}
                     }
                 ],
@@ -198,7 +585,7 @@
                 "buckets": [
                     {
                         "x": 1039,
-                        "y": 1041,
+                        "y": 1037,
                         "GUID": "cf343fc7-8cfe-4a23-bd52-802ce22c41dc"
                     }
                 ],
@@ -225,6 +612,16 @@
                         "autoWidth": false,
                         "autoHeight": false,
                         "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "862a0bde-0ec8-49fb-801b-11375b9b9de8"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "99d1df35-2e09-4e4a-bafe-086df0ace5d3"
                     }
                 ],
                 "relationshipUpdateDisabled": false
