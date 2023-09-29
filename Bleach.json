@@ -116,6 +116,25 @@
                         "e71d0946-9930-4ca4-95f6-888c5ab535eb"
                     ],
                     "parentRelationship": "cec309e2-1327-4cf8-99ce-d5884e3f57be"
+                },
+                {
+                    "name": "genderrr",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "dataTypeMode": "Nullable",
+                    "type": "string",
+                    "compositeKey": [
+                        "timeUnitpartitionKey",
+                        "rangePartitionKey",
+                        "clusteringKey",
+                        "compositePrimaryKey"
+                    ],
+                    "timeUnitpartitionKey": false,
+                    "rangePartitionKey": false,
+                    "clusteringKey": false,
+                    "compositePrimaryKey": false,
+                    "GUID": "17553acb-5536-40c2-8112-250ef5da3cc2",
+                    "error": {}
                 }
             ],
             "definitions": {
@@ -506,7 +525,8 @@
         "cb314183-715a-453b-957a-a6eee178c357": "fk skills.character_id to characters.id",
         "cec309e2-1327-4cf8-99ce-d5884e3f57be": "fk basic_characteristic.character_id to characters.id",
         "26371c14-ff65-4f5d-a62d-5e5f72ec49a3": "created_at",
-        "068f331b-b906-4214-8f57-8e8c3ec320fe": "updated_at"
+        "068f331b-b906-4214-8f57-8e8c3ec320fe": "updated_at",
+        "17553acb-5536-40c2-8112-250ef5da3cc2": "genderrr"
     },
     "definitions": {
         "type": "definitions",
@@ -536,7 +556,7 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2023-09-27T09:27:33.414Z",
+    "lastModifTS": "2023-09-29T13:41:07.737Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -545,7 +565,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.11.0"
+        "version": "6.11.3"
     },
     "settings": {
         "centralPane": {
