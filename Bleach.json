@@ -118,7 +118,7 @@
                     "parentRelationship": "cec309e2-1327-4cf8-99ce-d5884e3f57be"
                 },
                 {
-                    "name": "genderrr",
+                    "name": "gender",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "dataTypeMode": "Nullable",
@@ -437,11 +437,11 @@
                         "y": 1243.5
                     },
                     {
-                        "x": 1427.6666666666667,
+                        "x": 1383,
                         "y": 1243.5
                     },
                     {
-                        "x": 1427.6666666666667,
+                        "x": 1383,
                         "y": 1270
                     }
                 ],
@@ -481,25 +481,25 @@
                 "dataType": "",
                 "shape": [
                     {
-                        "x": 1176,
-                        "y": 1216
+                        "x": 1281,
+                        "y": 1159.5
                     },
                     {
-                        "x": 1176,
-                        "y": 1243
+                        "x": 1542,
+                        "y": 1159.5
                     },
                     {
-                        "x": 1338.3333333333333,
-                        "y": 1243
+                        "x": 1542,
+                        "y": 1320.5
                     },
                     {
-                        "x": 1338.3333333333333,
-                        "y": 1270
+                        "x": 1517,
+                        "y": 1320.5
                     }
                 ],
                 "sides": [
-                    "bottom",
-                    "top"
+                    "right",
+                    "right"
                 ]
             }
         }
@@ -526,7 +526,7 @@
         "cec309e2-1327-4cf8-99ce-d5884e3f57be": "fk basic_characteristic.character_id to characters.id",
         "26371c14-ff65-4f5d-a62d-5e5f72ec49a3": "created_at",
         "068f331b-b906-4214-8f57-8e8c3ec320fe": "updated_at",
-        "17553acb-5536-40c2-8112-250ef5da3cc2": "genderrr"
+        "17553acb-5536-40c2-8112-250ef5da3cc2": "gender"
     },
     "definitions": {
         "type": "definitions",
@@ -556,16 +556,16 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2023-09-29T13:41:07.737Z",
+    "lastModifTS": "2023-10-20T08:23:07.925Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginName": "BigQuery",
-        "pluginVersion": "0.1.22",
+        "pluginVersion": "0.1.23",
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.11.3"
+        "version": "6.11.5"
     },
     "settings": {
         "centralPane": {
@@ -575,8 +575,8 @@
                         "GUID": "a25ab129-d8a3-4b8a-8f24-6637774b0ead",
                         "x": 1079,
                         "y": 1081,
-                        "width": 194,
-                        "height": 135,
+                        "width": 202,
+                        "height": 157,
                         "color": {}
                     },
                     {
