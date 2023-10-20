@@ -106,25 +106,6 @@
                     "compositePrimaryKey": false,
                     "GUID": "2ef4f274-ba81-48ee-b98b-2e7a85186928",
                     "error": {}
-                },
-                {
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "dataTypeMode": "Required",
-                    "type": "string",
-                    "compositeKey": [
-                        "timeUnitpartitionKey",
-                        "rangePartitionKey",
-                        "clusteringKey",
-                        "compositePrimaryKey"
-                    ],
-                    "timeUnitpartitionKey": false,
-                    "rangePartitionKey": false,
-                    "clusteringKey": false,
-                    "compositePrimaryKey": false,
-                    "GUID": "db0f0f36-e8f7-4b90-9685-177773438ec9",
-                    "name": "nationality",
-                    "error": {}
                 }
             ],
             "definitions": {
@@ -174,8 +155,7 @@
         "77f3c82b-5672-47e4-b651-fc99ee0a8ee9": "surname",
         "24c0f632-520d-43e9-9d41-86a3266bbd45": "age",
         "231f4590-056f-4f53-bfbc-ac78e10ff777": "date_of_birth",
-        "2ef4f274-ba81-48ee-b98b-2e7a85186928": "gender",
-        "db0f0f36-e8f7-4b90-9685-177773438ec9": "nationality"
+        "2ef4f274-ba81-48ee-b98b-2e7a85186928": "gender"
     },
     "definitions": {
         "type": "definitions",
@@ -205,7 +185,7 @@
             "modelName": false
         }
     },
-    "lastModifTS": "2023-10-19T14:45:00.669Z",
+    "lastModifTS": "2023-10-19T14:56:24.163Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -214,7 +194,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.11.5"
+        "version": "6.11.6"
     },
     "settings": {
         "centralPane": {
@@ -225,7 +205,7 @@
                         "x": 1079,
                         "y": 1081,
                         "width": 219,
-                        "height": 138,
+                        "height": 127,
                         "color": {}
                     }
                 ],
