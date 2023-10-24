@@ -343,12 +343,10 @@
                 "properties": [],
                 "type": "definitions"
             },
-            "collectionName": "brewery",
+            "collectionName": "brewery2",
             "isActivated": true,
             "additionalProperties": true,
-            "hackoladeMeta": {
-                "validationErrors": {}
-            }
+            "hackoladeMeta": {}
         }
     ],
     "buckets": [
@@ -357,10 +355,6 @@
             "name": "beer-sample",
             "type": "bucket",
             "collectionIds": [
-                "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
-                "e1f5d241-ffeb-11e6-bc11-bba283d07659",
-                "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
-                "e1f5d241-ffeb-11e6-bc11-bba283d07659",
                 "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
                 "e1f5d241-ffeb-11e6-bc11-bba283d07659"
             ],
@@ -383,7 +377,10 @@
             "conflictResolution": "Sequence number",
             "replicasNumber": 1,
             "bucketIOPriority": "Low (Default)",
-            "isActivated": true
+            "isActivated": true,
+            "hackoladeMeta": {
+                "validationErrors": {}
+            }
         }
     ],
     "views": [],
@@ -409,7 +406,9 @@
                     "e1f50ef8-ffeb-11e6-bc11-bba283d07659"
                 ]
             ],
-            "childCardinality": "0..n"
+            "childCardinality": "0..n",
+            "hackoladeStyles": {},
+            "isActivated": true
         }
     ],
     "users": [],
@@ -444,7 +443,7 @@
         "e1f5d24f-ffeb-11e6-bc11-bba283d07659": "accuracy",
         "e1f5d250-ffeb-11e6-bc11-bba283d07659": "lat",
         "e1f5d251-ffeb-11e6-bc11-bba283d07659": "lon",
-        "e1f5d241-ffeb-11e6-bc11-bba283d07659": "brewery",
+        "e1f5d241-ffeb-11e6-bc11-bba283d07659": "brewery2",
         "e2117090-ffeb-11e6-bc11-bba283d07659": "beer-sample",
         "eeb89350-ffeb-11e6-bc11-bba283d07659": "fk brewery.KEY to beer.brewery_id"
     },
@@ -465,12 +464,12 @@
     },
     "sources": [],
     "decorativeSymbols": [],
-    "dbVersion": "v4.6",
     "dbVendor": "Couchbase",
+    "dbVersion": "v4.6",
     "appTarget": "COUCHBASE",
     "creationTS": "2017-03-03T08:31:48.344Z",
     "GUID": "d7bfaf80-ffeb-11e6-bc11-bba283d07659",
-    "lastModifTS": "2022-11-24T13:16:01.759Z",
+    "lastModifTS": "2023-10-24T10:17:49.157Z",
     "persistenceSchemaVersion": "6",
     "description": "beer-sample application described in http://docs.couchbase.com/admin/admin/Misc/sample-bucket-beer.html",
     "comments": "",
@@ -487,7 +486,7 @@
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.6.4"
+        "version": "6.11.6"
     },
     "code": "another techinacl change",
     "settings": {
@@ -496,8 +495,8 @@
                 "erd": [
                     {
                         "GUID": "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
-                        "x": 375,
-                        "y": 96,
+                        "x": 1325,
+                        "y": 1046,
                         "width": 195,
                         "height": 203,
                         "color": {
@@ -526,8 +525,8 @@
                     },
                     {
                         "GUID": "e1f5d241-ffeb-11e6-bc11-bba283d07659",
-                        "x": 90,
-                        "y": 90,
+                        "x": 1040,
+                        "y": 1040,
                         "width": 201,
                         "height": 272,
                         "color": {
@@ -555,22 +554,50 @@
                         }
                     }
                 ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
                 "buckets": [
                     {
-                        "x": 50,
-                        "y": 50,
+                        "x": 1000,
+                        "y": 1000,
                         "GUID": "e2117090-ffeb-11e6-bc11-bba283d07659"
                     }
                 ],
-                "diagramViews": [],
-                "decorativeSymbols": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
                 "graphView": {
                     "erd": [],
                     "buckets": [],
                     "decorativeSymbols": [],
                     "forceLayout": true,
                     "defaultLinkLength": 300
-                }
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "GUID": "e1f50ef1-ffeb-11e6-bc11-bba283d07659",
+                        "autoWidth": false,
+                        "autoHeight": false
+                    },
+                    {
+                        "GUID": "e1f5d241-ffeb-11e6-bc11-bba283d07659",
+                        "autoWidth": false,
+                        "autoHeight": false
+                    }
+                ],
+                "relationshipUpdateDisabled": false
             },
             "collectionLevel": {},
             "changed": false
